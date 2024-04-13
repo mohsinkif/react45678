@@ -12,5 +12,8 @@ export default function UserLogin() {
 export const loginAction = async ({ request, params }) => {
   const formData = await request.json();
   console.log(formData);
-  return null;
+
+  const loginRequest = fetch('http://127.0.0.1:8001/login',formData)
+  const loginRequestData = await loginRequest.json();
+  return loginRequestData;
 }
