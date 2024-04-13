@@ -1,6 +1,6 @@
 import React from 'react'
 import AuthenticationForm from '../Components/AuthenticationForm';
-import { redirect } from 'react-router-dom';
+import { json, redirect } from 'react-router-dom';
 
 export default function UserLogin() {
   return (
@@ -26,13 +26,15 @@ export const loginAction = async ({ request, params }) => {
 
     if (!loginRequest.ok) {
       throw new Error('Failed to fetch');
-       
+    }
+    if(loginRequest.status === "200_OK"){
+      const loginRequestData = await loginRequest.json();
+      return redirect('/home');
     }
 
-    const loginRequestData = await loginRequest.json();
-    return loginRequestData;
+    
   } catch (error) {
     console.error('Error:', error);
-    return redirect("/adminLogin")
+    return json({ error: 'An error occurred while fetching data' });
   }
 }
