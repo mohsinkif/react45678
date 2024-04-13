@@ -1,5 +1,6 @@
 import React from 'react'
 import AuthenticationForm from '../Components/AuthenticationForm';
+import { redirect } from 'react-router-dom';
 
 export default function UserLogin() {
   return (
@@ -22,5 +23,8 @@ export const loginAction = async ({ request, params }) => {
     body: JSON.stringify(formData)
   })
   const loginRequestData = await loginRequest.json();
+  if(!loginRequestData.status){
+    redirect('/adminLLoginPage')
+  }
   return loginRequestData;
 }
