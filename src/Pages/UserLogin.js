@@ -10,6 +10,7 @@ export default function UserLogin() {
 
 
 export const loginAction = async ({ request, params }) => {
-  const formData = await request.formData();
+  const formData = await request.json();
   console.log(formData);
+  return null;
 }
