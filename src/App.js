@@ -1,15 +1,16 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import './App.css';
-import WwelcomePage from "./Pages/WelcomePage";
+import WelcomePage from "./Pages/WelcomePage";
 import UserLogin from "./Pages/UserLogin";
+import AdminLogin from "./Pages/AdminLogin";
 function App() {
   const router = createBrowserRouter([
     {
       path:'/',
       children:[
-        {index:true,element:<WwelcomePage/>,},
+        {index:true,element:<WelcomePage/>,},
         {path:'/userLogin',element:<UserLogin/>},
-        {path:'/adminLogin',element:'adminLoginPage'},
+        {path:'/adminLogin',element:<AdminLogin/>},
         {path:'/home',element:'homePage',}
       ]
     }
