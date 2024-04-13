@@ -24,7 +24,7 @@ export const loginAction = async ({ request, params }) => {
   })
   const loginRequestData = await loginRequest.json();
   if(!loginRequestData.status){
-    redirect('/adminLLoginPage')
+    redirect('/adminLogin')
   }
   return loginRequestData;
 }
