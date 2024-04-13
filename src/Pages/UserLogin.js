@@ -25,10 +25,9 @@ export const loginAction = async ({ request, params }) => {
   if (!loginRequest.ok) {
     return json({message:'UnAuthorized Acces', status:loginRequest.status})
   }
-  if(loginRequest.status === "200_OK"){
-    const loginRequestData = await loginRequest.json();
-    return redirect('/home');
-  }
+  return redirect('/home');
+
+
   
 }
 
