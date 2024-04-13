@@ -8,8 +8,8 @@ function App() {
       path:'/',
       children:[
         {index:true,element:<WwelcomePage/>,},
-        {path:'userLogin',element:'loginPage'},
-        {path:'adminLogin',element:'loginPage'},
+        {path:'/userLogin',element:'userLoginPage'},
+        {path:'/adminLogin',element:'adminLoginPage'},
         {path:'/home',element:'homePage',}
       ]
     }
