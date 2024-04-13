@@ -11,30 +11,51 @@ export default function UserLogin() {
 
 
 export const loginAction = async ({ request, params }) => {
-  try {
-    const formData = await request.json();
-    console.log(formData);
+  
+  const formData = await request.json();
+  const loginRequest = await fetch('http://127.0.0.1:8001/login', {
+    method: request.method,
+    // mode: 'no-cors',
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formData)
+  });
 
-    const loginRequest = await fetch('http://127.0.0.1:8001/login', {
-      method: request.method,
-      // mode: 'no-cors',
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData)
-    });
-
-    if (!loginRequest.ok) {
-      throw new Error('Failed to fetch');
-    }
-    if(loginRequest.status === "200_OK"){
-      const loginRequestData = await loginRequest.json();
-      return redirect('/home');
-    }
-
-    
-  } catch (error) {
-    console.error('Error:', error);
-    return json({ error: 'An error occurred while fetching data' });
+  if (!loginRequest.ok) {
+    return json({message:'UnAuthorized Acces', status:loginRequest.status})
   }
+  if(loginRequest.status === "200_OK"){
+    const loginRequestData = await loginRequest.json();
+    return redirect('/home');
+  }
+  
 }
+
+
+/*
+try {
+  const formData = await request.json();
+  console.log(formData);
+
+  const loginRequest = await fetch('http://127.0.0.1:8001/login', {
+    method: request.method,
+    // mode: 'no-cors',
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formData)
+  });
+
+  if (!loginRequest.ok) {
+    throw new Error('Failed to fetch');
+  }
+  if(loginRequest.status === "200_OK"){
+    const loginRequestData = await loginRequest.json();
+    return redirect('/home');
+  }
+
+} catch (error) {
+  console.error('Error:', error);
+  return json({ error: 'An error occurred while fetching data' });
+} */
