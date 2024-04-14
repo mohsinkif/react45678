@@ -1,10 +1,11 @@
 import React from 'react'
 import { redirect, useActionData } from 'react-router-dom'
-
+import Navbar from '../Components/Navbar'
 export default function Home() {
 
   return (
     <div>
+      <Navbar/>
       
     </div>
   )
