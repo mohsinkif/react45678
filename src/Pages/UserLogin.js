@@ -9,7 +9,7 @@ export default function UserLogin() {
   )
 }
 
-export const loginLoader = ({request, params}) => {
+export const loginLoader = async ({request, params}) => {
   function getCookie(cookieName) {
     const name = cookieName + "=";
     const decodedCookie = decodeURIComponent(document.cookie);
@@ -27,12 +27,12 @@ export const loginLoader = ({request, params}) => {
 }
 
 const token = getCookie("token");
-if (token && token !== null) {
-     redirect('/userLogin');
+if (token) {
+     return redirect('/home');
 } else {
-   return redirect('/home');
+   return redirect('/userLogin');
 }
-return null;
+
 }
 
 export const loginAction = async ({ request, params }) => {
