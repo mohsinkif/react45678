@@ -21,17 +21,17 @@ export const loginAction = async ({ request, params }) => {
     },
     body: JSON.stringify(formData)
   });
+  const loginRequestData = await loginRequest.json();
 
   if (!loginRequest.ok) {
     return json({message:'Un Authorized Acces', status:loginRequest.status});
     
   }
   else {
-    const loginRequestData = await loginRequest.json();
-    return  loginRequestData
+    redirect('/home')
   }
   
-  return (redirect('/home'));
+  return (loginRequestData);
 
 
   
