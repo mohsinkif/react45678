@@ -10,7 +10,7 @@ function App() {
       path:'/',
       children:[
         {index:true,element:<WelcomePage/>,loader:welcomePageLoader},
-        {path:'/userLogin',element:<UserLogin/>, action:loginAction,loader:loginLoader,},
+        {path:'/userLogin',element:<UserLogin/>, action:loginAction},
         {path:'/adminLogin',element:<AdminLogin/>},
         {path:'/home',element:<Home/>,loader:homePageLoaderFunction}
       ]
