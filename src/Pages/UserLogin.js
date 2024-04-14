@@ -27,7 +27,7 @@ export const loginLoader = ({request, params}) => {
 }
 
 const token = getCookie("token");
-if (token !== null) {
+if (token && token !== null) {
      redirect('/userLogin');
 } else {
    return redirect('/home');
