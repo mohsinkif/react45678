@@ -27,9 +27,12 @@ export const loginAction = async ({ request, params }) => {
     
   }
   else {
+    var date = new Date();
+    date.setTime(date.getTime() + (2 * 24 * 60 * 60 * 1000));
+    var expires = "; expires=" + date.toUTCString();
     const loginRequestData = await loginRequest.json();
-     console.log(loginRequestData);
-
+    document.cookie = "token" + "=" + (loginRequestData.token || "") + expires + "; path=/"; 
+    
   }
 
   return redirect('/home')
