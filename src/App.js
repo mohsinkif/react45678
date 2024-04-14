@@ -3,7 +3,7 @@ import './App.css';
 import WelcomePage from "./Pages/WelcomePage";
 import UserLogin, {loginAction} from "./Pages/UserLogin";
 import AdminLogin from "./Pages/AdminLogin";
-import Home from "./Pages/Home";
+import Home, {homePageLoaderFunction}  from "./Pages/Home";
 function App() {
   const router = createBrowserRouter([
     {
@@ -12,7 +12,7 @@ function App() {
         {index:true,element:<WelcomePage/>,},
         {path:'/userLogin',element:<UserLogin/>, action:loginAction},
         {path:'/adminLogin',element:<AdminLogin/>},
-        {path:'/home',element:<Home/>,}
+        {path:'/home',element:<Home/>,loader:homePageLoaderFunction}
       ]
     }
   ])
