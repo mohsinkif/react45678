@@ -40,7 +40,7 @@ const token = getCookie("token");
 if (token) {
      return redirect('/home');
 } else {
-   return redirect('/userLogin');
+   return redirect('/');
 }
 return null
 }
