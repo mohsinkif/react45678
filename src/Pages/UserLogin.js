@@ -32,7 +32,7 @@ if (token !== null) {
 } else {
    return redirect('/home');
 }
-return token;
+return null;
 }
 
 export const loginAction = async ({ request, params }) => {
