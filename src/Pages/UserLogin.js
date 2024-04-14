@@ -28,10 +28,10 @@ export const loginAction = async ({ request, params }) => {
     
   }
   else {
-    redirect('/home')
+     redirect('/home')
+    return (loginRequestData);
   }
   
-  return (loginRequestData);
 
 
   
