@@ -28,10 +28,11 @@ export const loginAction = async ({ request, params }) => {
   }
   else {
     const loginRequestData = await loginRequest.json();
-    return (loginRequestData);
+    return loginRequestData;
+
   }
-  
-  
+
+
 
 
   
