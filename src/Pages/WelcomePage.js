@@ -3,7 +3,9 @@ import { Link, redirect } from 'react-router-dom'
 
 
 export default function WelcomePage() {
+
   
+
   return (
     <div>
       <div className='flex justify-center space-x-20 items-center my-40' >

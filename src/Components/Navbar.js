@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import NavLink from "./CustomLink";
 import MenuOverlay from "./MenuOverLay";
 import {
@@ -41,12 +41,16 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const [loggedIn, setLoogedIn] = useState(true);
 
+  useEffect(()=>{},[loggedIn]
+  )
 
 
   const logOutHandler = () => {
     document.cookie = "token" + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     navigate('/')
+    setLoogedIn(False);
   }
 
   return (
