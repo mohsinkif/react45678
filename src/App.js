@@ -5,6 +5,8 @@ import UserLogin, {loginAction, } from "./Pages/UserLogin";
 import AdminLogin from "./Pages/AdminLogin";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
+import Contact from "./Pages/Contact";
+
 function App() {
   const router = createBrowserRouter([
     {
@@ -14,7 +16,8 @@ function App() {
         {path:'/userLogin',element:<UserLogin/>, action:loginAction},
         {path:'/adminLogin',element:<AdminLogin/>},
         {path:'/home',element:<Home/>},
-        {path:'/about',element:<About/>}
+        {path:'/about',element:<About/>},
+        {path:'/contact',element:<Contact/>}
 
       ]
     }

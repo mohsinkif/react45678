@@ -5,8 +5,6 @@ import { MapContainer, TileLayer, SVGOverlay, Marker, Popup,useMap } from 'react
 import { useQuery } from "react-query";
 import axios from 'axios'
 import "leaflet.heat"
-import data from "../Data/data";
-
 const position = [51.505, -0.09]
 const bounds = [
   [51.49, -0.08],
@@ -31,10 +29,8 @@ const Map = () => {
 };
 
 export default Map;
-
-
 async function Fetchdata(){
-  const data = await axios.get('../Data/data.js')
+  const data = await axios.get('http://127.0.0.1:8001/fetch_coordinates')
   return data
 }
 function HeatMap() {

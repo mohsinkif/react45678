@@ -8,7 +8,7 @@ import { TiLeaf } from "react-icons/ti";
 const navLinks = [
   {
     title: "Home",
-    path: "/",
+    path: "/home",
   },
 
   {
