@@ -5,7 +5,6 @@ import { Link, redirect } from 'react-router-dom'
 export default function WelcomePage() {
 
   useEffect(()=>{
-    window.location.reload();
   },[])
   
 

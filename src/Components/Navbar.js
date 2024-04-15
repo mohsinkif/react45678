@@ -44,7 +44,9 @@ const Navbar = () => {
   const [loggedIn, setLoogedIn] = useState(true);
 
   
-
+  useEffect(()=>{
+    window.location.reload();
+  }, [loggedIn])
 
   const logOutHandler = () => {
     setLoogedIn(false);
