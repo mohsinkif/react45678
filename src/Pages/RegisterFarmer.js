@@ -201,7 +201,7 @@ export default function RegisterFarmer() {
   );
 }
 
-const farmerRegistrationAction = async ({request, params}) => {
+export const farmerRegistrationAction = async ({request, params}) => {
 
     const formData = await request.json();
     const sendDataRequest = await fetch('http://127.0.0.1:8001/RegisterUser', {
