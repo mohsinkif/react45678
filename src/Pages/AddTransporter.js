@@ -8,10 +8,12 @@ export default function AddTransporter() {
     const data = useActionData();
     const submit = useSubmit();
     const [formData, setFormData] = useState({
-        city:'',
         transporter_name: '',
         transporter_email: '',
-        transporter_phone: '',});
+        transporter_phone: '',
+        city:'',
+    
+    });
     
     const handleChange = (e) => {
         setFormData({
@@ -23,7 +25,7 @@ export default function AddTransporter() {
     const submitData = (event) =>{
         event.preventDefault(); 
         submit(formData,
-          {method:'post',action: "/registerfarmer" ,encType: "application/json",})
+          {method:'post',action: "/addtransporter" ,encType: "application/json",})
     }
     
   return (
@@ -47,15 +49,15 @@ export default function AddTransporter() {
                         <input
                           required
                           autoComplete="off"
-                          id="transportername"
-                          name="transportername"
+                          id="transporter_name"
+                          name="transporter_name"
                           type="text"
                           className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
                           placeholder="Harvester Name"
                           onChange={handleChange}
                         />
                         <label
-                          htmlFor="harvestername"
+                          htmlFor="transporter_name"
                           className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
                         >
                           Transporter Name
@@ -65,15 +67,15 @@ export default function AddTransporter() {
                         <input
                           required
                           autoComplete="off"
-                          id="email"
-                          name="transporteremail"
+                          id="transporter_email"
+                          name="transporter_email"
                           type="email"
                           className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
                           placeholder="Harvester Email"
                           onChange={handleChange}
                         />
                         <label
-                          htmlFor="email"
+                          htmlFor="transporter_email"
                           className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
                         >
                           Transporter Email
@@ -84,15 +86,15 @@ export default function AddTransporter() {
                         <input
                           required
                           autoComplete="off"
-                          id="farmer_land"
-                          name="transportercity"
+                          id="tcity"
+                          name="tcity"
                           type="text"
                           className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
                           placeholder="Farmer Land"
                           onChange={handleChange}
                         />
                         <label
-                          htmlFor="farmer_land"
+                          htmlFor="tcity"
                           className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
                         >
                           City
@@ -103,15 +105,15 @@ export default function AddTransporter() {
                         <input
                           required
                           autoComplete="off"
-                          id="transporterphonenumber"
-                          name="transporterphonenumber"
+                          id="transporter_phone"
+                          name="transporter_phone"
                           type="number"
                           className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
                           placeholder="harvesterphonenumber"
                           onChange={handleChange}
                         />
                         <label
-                          htmlFor="farmerphonenumber"
+                          htmlFor="transporter_phone"
                           className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
                         >
                           Transporter Contact
@@ -140,7 +142,7 @@ export default function AddTransporter() {
 
 export const addTransporterAction = async ({request,params}) => {
     const formData = await request.json();
-    const sendDataRequest = await fetch('http://127.0.0.1:8001/RegisterUser', {
+    const sendDataRequest = await fetch('http://127.0.0.1:8001/add_transporter', {
     method: request.method,
     // mode: 'no-cors',
     headers: {
