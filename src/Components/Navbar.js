@@ -8,6 +8,7 @@ import {
   Link,
   Navigate,
   redirect,
+  useNavigate
 } from "react-router-dom";
 import { TiLeaf } from "react-icons/ti";
 
@@ -37,11 +38,13 @@ const navLinks = [
 ];
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   const logOutHandler = () => {
     document.cookie = "token" + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    return redirect('/')
+    return navigate('/')
   }
 
   return (
