@@ -6,7 +6,7 @@ export default function AuthenticationForm() {
     const location = useLocation();
     const path = location.pathname;
     const segments = path.split('/');
-    const pathName = segments[1]; // The word 'user' is at the first index
+    const pathName = segments[1]; 
 
     const [formData,setFormData]=useState({
         email: '',
