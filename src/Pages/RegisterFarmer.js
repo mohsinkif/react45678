@@ -1,8 +1,10 @@
 import React, {useState} from "react";
 import AdminNavbar from "../Components/AdminNavbar";
 import classes from "../CSS/adminPages.module.css";
+import { useSubmit } from "react-router-dom";
 
 export default function RegisterFarmer() {
+    const submit = useSubmit();
     const [formData, setFormData] = useState({
         farmername: '',
         farmeremail: '',
@@ -25,6 +27,12 @@ export default function RegisterFarmer() {
             [e.target.name]: e.target.value,
         });
     };
+
+    const submitData = () =>{
+        event.preventDefault(); 
+        submit(formData,
+          {method:'post',action: `/${pathName}` ,encType: "application/json",})
+    }
     
   return (
     <div className={classes.contentContainer}>
@@ -176,6 +184,7 @@ export default function RegisterFarmer() {
                       <div className="relative">
                         <button
                           className="bg-green-500 text-white rounded-md px-2 py-1 "
+                          onClick={submitData}
                         >
                           Submit
                         </button>
