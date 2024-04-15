@@ -9,7 +9,7 @@ export default function AdminLogin() {
   )
 }
 
-export const adminLloginAction = async ({ request, params }) => {
+export const adminLoginAction = async ({ request, params }) => {
   
   const formData = await request.json();
   const loginRequest = await fetch('http://127.0.0.1:8001/adminlogin', {
