@@ -6,6 +6,7 @@ import AdminLogin from "./Pages/AdminLogin";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
+import Harvester from "./Pages/Harvester";
 
 function App() {
   const router = createBrowserRouter([
@@ -17,7 +18,8 @@ function App() {
         {path:'/adminLogin',element:<AdminLogin/>},
         {path:'/home',element:<Home/>},
         {path:'/about',element:<About/>},
-        {path:'/contact',element:<Contact/>}
+        {path:'/contact',element:<Contact/>},
+        {path:'harvester',element:<Harvester/>}
 
       ]
     }
