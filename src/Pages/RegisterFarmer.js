@@ -191,13 +191,14 @@ export default function RegisterFarmer() {
                           Submit
                         </button>
                       </div>
+                      {data ? <p style={{color:"Orange"}}>{data.message}</p> : null}
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          {data? <p style={{color:"Orange"}}>{data.message}</p> : null}
+          
 
         </form>
       </div>
