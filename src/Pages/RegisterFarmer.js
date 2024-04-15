@@ -39,9 +39,7 @@ export default function RegisterFarmer() {
   return (
     <div className={classes.contentContainer}>
       <div className={classes.contentHolder}>
-        <form
-          
-          className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12"
+        <form onSubmit={submitData} className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12"
         >
           <div className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
             <div className="relative py-3 sm:max-w-xl sm:mx-auto">
@@ -186,7 +184,6 @@ export default function RegisterFarmer() {
                       <div className="relative">
                         <button
                           className="bg-green-500 text-white rounded-md px-2 py-1 "
-                          onClick={submitData}
                         >
                           Submit
                         </button>
