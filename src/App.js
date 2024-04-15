@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import './App.css';
 import WelcomePage, {welcomeLoader} from "./Pages/WelcomePage";
 import UserLogin, {loginAction,loginLoaderFunction } from "./Pages/UserLogin";
-import AdminLogin from "./Pages/AdminLogin";
+import AdminLogin, {adminLloginAction} from "./Pages/AdminLogin";
 import Home, {homePageLoaderFunction} from "./Pages/Home";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
@@ -15,7 +15,7 @@ function App() {
       children:[
         {index:true,element:<WelcomePage/>,loader:welcomeLoader},
         {path:'/userLogin',element:<UserLogin/>, action:loginAction,loader:welcomeLoader},
-        {path:'/adminLogin',element:<AdminLogin/>, action:loginAction},
+        {path:'/adminLogin',element:<AdminLogin/>, action:adminLloginAction},
         {path:'/home',element:<Home/>,loader:homePageLoaderFunction},
         {path:'/about',element:<About/>},
         {path:'/contact',element:<Contact/>},
