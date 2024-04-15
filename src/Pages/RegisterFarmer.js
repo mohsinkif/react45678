@@ -191,7 +191,7 @@ export default function RegisterFarmer() {
                           Submit
                         </button>
                       </div>
-                      {data ? <p style={{color:"Orange"}}>{data.message}</p> : null}
+                      {data ? <p className="bg-green-600">{data.message}</p> : null}
                     </div>
                   </div>
                 </div>
