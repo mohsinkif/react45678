@@ -33,49 +33,49 @@ export default function AdminHome() {
 
       <div className={classes.adminButtonContainer}>
         <div className={classes.adminButtonsHolder}>
-          <Link to="/userLogin">
+          <Link to="/registerfarmer">
             <button className="rounded px-12 font-bold text-2xl py-5 hover:bg-green-400 bg-green-600 text-white">
               Register Farmer
             </button>
           </Link>
 
-          <Link to="/userLogin">
+          <Link to="/addharvester">
             <button className="rounded px-12 font-bold text-2xl py-5 hover:bg-green-400 bg-green-600 text-white">
               Add Harvester
             </button>
           </Link>
 
-          <Link to="/userLogin">
+          <Link to="/addtransporter">
             <button className="rounded px-12 font-bold text-2xl py-5 hover:bg-green-400 bg-green-600 text-white">
               Add Transporter
             </button>
           </Link>
 
-          <Link to="/userLogin">
+          <Link to="/viewharvester">
             <button className="rounded px-12 font-bold text-2xl py-5 hover:bg-green-400 bg-green-600 text-white">
               View Harvester
             </button>
           </Link>
 
-          <Link to="/userLogin">
+          <Link to="/viewtransporter">
             <button className="rounded px-12 font-bold text-2xl py-5 hover:bg-green-400 bg-green-600 text-white">
               View Transporter 
             </button>
           </Link>
 
-          <Link to="/userLogin">
+          <Link to="/deleteharvester">
             <button className="rounded px-12 font-bold text-2xl py-5 hover:bg-green-400 bg-green-600 text-white">
               Delete Harvester
             </button>
           </Link>
 
-          <Link to="/userLogin">
+          <Link to="/deletetransporter">
             <button className="rounded px-12 font-bold text-2xl py-5 hover:bg-green-400 bg-green-600 text-white">
               Delete Transporter
             </button>
           </Link>
 
-          <Link to="/userLogin">
+          <Link to="/updatefarmer">
             <button className="rounded px-12 font-bold text-2xl py-5 hover:bg-green-400 bg-green-600 text-white">
               Update Farmer  
             </button>
