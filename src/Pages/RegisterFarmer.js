@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import AdminNavbar from "../Components/AdminNavbar";
 import classes from "../CSS/adminPages.module.css";
-import { useSubmit } from "react-router-dom";
+import { json, useSubmit } from "react-router-dom";
 
 export default function RegisterFarmer() {
     
@@ -216,6 +216,6 @@ export const farmerRegistrationAction = async ({request, params}) => {
 
   if(sendDataRequest.ok){
     const requestData = await sendDataRequest.json();
-    return requestData;
+    return json({message:"The Data has been Succesfully Entered",status:sendDataRequest.status});
   }
 }
