@@ -34,7 +34,7 @@ export const adminLoginAction = async ({ request, params }) => {
 
   }
 
-  return redirect('/home')
+  return redirect('/adminHome')
 
 
   

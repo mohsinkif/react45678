@@ -1,6 +1,6 @@
 .adminButtonContainer{
     margin: 100px auto 0px auto;
-    width:90%;
+    width:75%;
     height: max-content;
     
 }
@@ -9,7 +9,7 @@
     width:100%;
     height: max-content;
     display: flex;
-    justify-content: space-around;
-    gap:40px 0px;
+    justify-content: center;
+    gap:40px 20px;
     flex-wrap: wrap;
 }

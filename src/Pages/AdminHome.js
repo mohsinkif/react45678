@@ -53,31 +53,37 @@ export default function AdminHome() {
 
           <Link to="/viewharvester">
             <button className="rounded px-12 font-bold text-2xl py-5 hover:bg-green-400 bg-green-600 text-white">
-              View Harvester
+              View Harvester Data
             </button>
           </Link>
 
           <Link to="/viewtransporter">
             <button className="rounded px-12 font-bold text-2xl py-5 hover:bg-green-400 bg-green-600 text-white">
-              View Transporter 
+              View Transporter Data
             </button>
           </Link>
 
           <Link to="/deleteharvester">
             <button className="rounded px-12 font-bold text-2xl py-5 hover:bg-green-400 bg-green-600 text-white">
-              Delete Harvester
+              Delete Harvester Data
             </button>
           </Link>
 
           <Link to="/deletetransporter">
             <button className="rounded px-12 font-bold text-2xl py-5 hover:bg-green-400 bg-green-600 text-white">
-              Delete Transporter
+              Delete Transporter Data
             </button>
           </Link>
 
           <Link to="/updatefarmer">
             <button className="rounded px-12 font-bold text-2xl py-5 hover:bg-green-400 bg-green-600 text-white">
-              Update Farmer  
+              Update Farmer Data
+            </button>
+          </Link>
+
+          <Link to="/updatefarmer">
+            <button className="rounded px-12 font-bold text-2xl py-5 hover:bg-green-400 bg-green-600 text-white">
+              View Farmer Data
             </button>
           </Link>
         </div>
