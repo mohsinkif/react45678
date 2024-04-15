@@ -2,8 +2,11 @@ import React, {useState} from "react";
 import AdminNavbar from "../Components/AdminNavbar";
 import classes from "../CSS/adminPages.module.css";
 import { json, useSubmit } from "react-router-dom";
+import { useActionData } from "react-router-dom";
 
 export default function RegisterFarmer() {
+    
+    import data = useActionData();
     
     const submit = useSubmit();
     const [formData, setFormData] = useState({
@@ -19,8 +22,7 @@ export default function RegisterFarmer() {
         harvester_email: '',
         transporter_name: '',
         transporter_email: '',
-        transporter_phone: '',
-    });
+        transporter_phone: '',});
     
     const handleChange = (e) => {
         setFormData({
