@@ -8,6 +8,7 @@ import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Harvester from "./Pages/Harvester";
 import AdminHome from "./Pages/AdminHome";
+import RegisterFarmer,{farmerRegistrationAction} from "./Pages/RegisterFarmer";
 function App() {
   const router = createBrowserRouter([
     {
@@ -20,7 +21,9 @@ function App() {
         {path:'/about',element:<About/>},
         {path:'/contact',element:<Contact/>},
         {path:'/harvester',element:<Harvester/>},
-        {path:'/adminHome',element:<AdminHome/>}
+        {path:'/adminHome',element:<AdminHome/>},
+        {path:'registerfarmer', element:<RegisterFarmer/>,action:farmerRegistrationAction}
+
 
       ]
     }
