@@ -197,7 +197,7 @@ export default function RegisterFarmer() {
               </div>
             </div>
           </div>
-          {data && data.message && <p>{data.message}</p>}
+          {data && data.message && <p style={{color:"Orange"}}>{data.message}</p>}
 
         </form>
       </div>
