@@ -6,8 +6,8 @@ import { useActionData } from "react-router-dom";
 
 export default function RegisterFarmer() {
     
-    import data = useActionData();
-    
+    const  data = useActionData();
+
     const submit = useSubmit();
     const [formData, setFormData] = useState({
         farmername: '',
@@ -199,6 +199,7 @@ export default function RegisterFarmer() {
             </div>
           </div>
         </form>
+        {data && data.message && <p>{data.message}</p>}
       </div>
     </div>
   );
