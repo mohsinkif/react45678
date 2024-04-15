@@ -18,3 +18,13 @@ export default function WelcomePage() {
   )
 }
 
+export const welcomeLoader = async () => {
+  const tokenExist = document.cookie.split(';').some((item) => item.trim().startsWith("token" + '='));
+  if(tokenExist){
+    return redirect("/home");
+  }
+  else {
+    return null;
+  }
+}
+

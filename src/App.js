@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import './App.css';
-import WelcomePage from "./Pages/WelcomePage";
+import WelcomePage, {welcomeLoader} from "./Pages/WelcomePage";
 import UserLogin, {loginAction, } from "./Pages/UserLogin";
 import AdminLogin from "./Pages/AdminLogin";
 import Home from "./Pages/Home";
@@ -13,8 +13,8 @@ function App() {
     {
       path:'/',
       children:[
-        {index:true,element:<WelcomePage/>},
-        {path:'/userLogin',element:<UserLogin/>, action:loginAction},
+        {index:true,element:<WelcomePage/>,loader:welcomeLoader},
+        {path:'/userLogin',element:<UserLogin/>, action:loginAction,loader:welcomeLoader},
         {path:'/adminLogin',element:<AdminLogin/>},
         {path:'/home',element:<Home/>},
         {path:'/about',element:<About/>},
