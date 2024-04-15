@@ -1,9 +1,14 @@
 import React, {useState} from 'react'
-import { Form, useSubmit } from 'react-router-dom';
+import { Form, useSubmit, useLocation } from 'react-router-dom';
 
 
 export default function AuthenticationForm() {
+    const location = useLocation();
+    const path = location.pathname;
+    const segments = path.split('/');
+    const pathName = segments[1]; // The word 'user' is at the first index
 
+    console.log(user);
     const [formData,setFormData]=useState({
         email: '',
         password:'',
@@ -18,7 +23,7 @@ export default function AuthenticationForm() {
 
     const loginHandler = (event) => {
         event.preventDefault(); 
-        submit({email:formData.email, password:formData.password},{method:'post',action:'/userLogin',encType: "application/json",})
+        submit({email:formData.email, password:formData.password},{method:'post',action: `/${pathName}` ,encType: "application/json",})
     }
 
     return (
