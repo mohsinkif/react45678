@@ -7,6 +7,7 @@ import {
   Route,
   Link,
   Navigate,
+  redirect,
 } from "react-router-dom";
 import { TiLeaf } from "react-icons/ti";
 
@@ -39,9 +40,8 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   const logOutHandler = () => {
-    var expirationDate = new Date();
-    expirationDate.setFullYear(expirationDate.getFullYear() - 1); // Set it to a year ago
-    document.cookie = 'token' + "=; expires=" + expirationDate.toUTCString() + "; path=/;";
+    document.cookie = "token" + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    return redirect('/')
   }
 
   return (
@@ -79,7 +79,7 @@ const Navbar = () => {
                   <NavLink href={link.path} title={link.title} />
                 </li>
               ))}
-              <buttn onClick={logOutHandler}>Logout</buttn>
+              <button className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-green-500 hover:border-white" onClick={logOutHandler}>Logout</button>
             </ul>
           </div>
         </div>
