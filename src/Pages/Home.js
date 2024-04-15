@@ -1,11 +1,14 @@
 import React from 'react'
 import { redirect, useActionData } from 'react-router-dom'
 import Navbar from '../Components/Navbar'
+import Map from '../Components/Map'
+
 export default function Home() {
 
   return (
     <div>
       <Navbar/>
+      <Map/>
       
     </div>
   )
