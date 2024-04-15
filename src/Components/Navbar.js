@@ -43,8 +43,7 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const [loggedIn, setLoogedIn] = useState(true);
 
-  useEffect(()=>{},[loggedIn]
-  )
+  useEffect(()=>{},[loggedIn])
 
 
   const logOutHandler = () => {

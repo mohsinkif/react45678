@@ -31,10 +31,10 @@ export const homePageLoaderFunction = ({params,request}) => {
 }
 
 const token = getCookie("token");
-if (token !== null) {
+if (token) {
      redirect('/home');
 } else {
-   return redirect('/userLogin');
+   return redirect('/');
 }
 return token;
 }
