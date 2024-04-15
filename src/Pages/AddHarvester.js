@@ -121,9 +121,7 @@ export default function AddHarvester() {
                       </div>
                       
                       <div className="relative">
-                        <button
-                          className="bg-green-500 text-white rounded-md px-2 py-1 "
-                        >
+                        <button className="bg-green-500 text-white rounded-md px-2 py-1 ">
                           Submit
                         </button>
                       </div>
