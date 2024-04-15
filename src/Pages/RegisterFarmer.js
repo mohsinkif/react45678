@@ -4,6 +4,7 @@ import classes from "../CSS/adminPages.module.css";
 import { useSubmit } from "react-router-dom";
 
 export default function RegisterFarmer() {
+    
     const submit = useSubmit();
     const [formData, setFormData] = useState({
         farmername: '',
@@ -31,7 +32,7 @@ export default function RegisterFarmer() {
     const submitData = () =>{
         event.preventDefault(); 
         submit(formData,
-          {method:'post',action: `/${pathName}` ,encType: "application/json",})
+          {method:'post',action: "/registerfarmer" ,encType: "application/json",})
     }
     
   return (

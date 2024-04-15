@@ -22,7 +22,7 @@ function App() {
         {path:'/contact',element:<Contact/>},
         {path:'/harvester',element:<Harvester/>},
         {path:'/adminHome',element:<AdminHome/>},
-        {path:'registerfarmer', element:<RegisterFarmer/>,action:farmerRegistrationAction}
+        {path:'/registerfarmer', element:<RegisterFarmer/>,action:farmerRegistrationAction}
 
 
       ]
