@@ -50,7 +50,7 @@ const Navbar = () => {
   const logOutHandler = () => {
     document.cookie = "token" + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     navigate('/')
-    setLoogedIn(False);
+    setLoogedIn(false);
   }
 
   return (
