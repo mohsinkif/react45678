@@ -29,7 +29,7 @@ export default function RegisterFarmer() {
         });
     };
 
-    const submitData = () =>{
+    const submitData = (event) =>{
         event.preventDefault(); 
         submit(formData,
           {method:'post',action: "/registerfarmer" ,encType: "application/json",})
