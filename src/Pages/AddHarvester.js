@@ -4,8 +4,7 @@ import classes from "../CSS/adminPages.module.css";
 import { json, useSubmit } from "react-router-dom";
 import { useActionData } from "react-router-dom";
 
-export default function RegisterFarmer() {
-    
+export default function AddHarvester() {
     const data = useActionData();
     const submit = useSubmit();
     const [formData, setFormData] = useState({
@@ -39,7 +38,6 @@ export default function RegisterFarmer() {
   return (
     <div className={classes.contentContainer}>
       <div className={classes.contentHolder}>
-
       <AdminNavbar/>
         <form onSubmit={submitData} className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
           <div className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
@@ -49,7 +47,8 @@ export default function RegisterFarmer() {
                 <div className="max-w-md mx-auto">
                   <div>
                     <h1 className="text-2xl font-semibold">
-                      Enter Farmer Details
+                    Enter Harvester Details
+
                     </h1>
                   </div>
                   <div className="divide-y divide-gray-200">
@@ -58,73 +57,36 @@ export default function RegisterFarmer() {
                         <input
                           required
                           autoComplete="off"
-                          id="farmername"
-                          name="farmername"
+                          id="harvester_name"
+                          name="harvester_name"
                           type="text"
                           className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
-                          placeholder="Farmername"
+                          placeholder="Harvester Name"
                           onChange={handleChange}
                         />
                         <label
-                          htmlFor="farmername"
+                          htmlFor="harvester_name"
                           className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
                         >
-                          Farmer Name
+                          Harvester Name
                         </label>
                       </div>
                       <div className="relative">
                         <input
                           required
                           autoComplete="off"
-                          id="email"
-                          name="farmeremail"
+                          id="harvester_email"
+                          name="harvester_email"
                           type="email"
                           className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
-                          placeholder="Farmeremail"
+                          placeholder="Harvester Email"
                           onChange={handleChange}
                         />
                         <label
-                          htmlFor="email"
+                          htmlFor="harvester_email"
                           className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
                         >
-                          Farmer Email
-                        </label>
-                      </div>
-                      <div className="relative">
-                        <input
-                          required
-                          autoComplete="off"
-                          id="farmerusername"
-                          name="farmerusername"
-                          type="text"
-                          className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
-                          placeholder="farmerusername"
-                          onChange={handleChange}
-                        />
-                        <label
-                          htmlFor="farmerusername"
-                          className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
-                        >
-                          Farmer Username
-                        </label>
-                      </div>
-                      <div className="relative">
-                        <input
-                          required
-                          autoComplete="off"
-                          id="password"
-                          name="password"
-                          type="password"
-                          className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
-                          placeholder="Password"
-                          onChange={handleChange}
-                        />
-                        <label
-                          htmlFor="password"
-                          className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
-                        >
-                          {" "}
-                          Farmer Password
+                          Harvester Email
                         </label>
                       </div>
 
@@ -132,56 +94,40 @@ export default function RegisterFarmer() {
                         <input
                           required
                           autoComplete="off"
-                          id="farmer_land"
-                          name="farmer_land"
+                          id="city"
+                          name="city"
                           type="text"
                           className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
                           placeholder="Farmer Land"
                           onChange={handleChange}
                         />
                         <label
-                          htmlFor="farmer_land"
+                          htmlFor="city"
                           className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
                         >
-                          Address
+                          City
                         </label>
                       </div>
+
                       <div className="relative">
                         <input
                           required
                           autoComplete="off"
-                          id="farmerphonenumber"
-                          name="farmerphonenumber"
+                          id="harvester_phone"
+                          name="harvester_phone"
                           type="number"
                           className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
-                          placeholder="farmerphonenumber"
+                          placeholder="harvesterphonenumber"
                           onChange={handleChange}
                         />
                         <label
                           htmlFor="farmerphonenumber"
                           className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
                         >
-                          Farmer Contact
+                          Harvester Contact
                         </label>
                       </div>
-                      <div className="relative">
-                        <input
-                          required
-                          autoComplete="off"
-                          id="crop_name"
-                          name="crop_name"
-                          type="text"
-                          className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
-                          placeholder="crop_name"
-                          onChange={handleChange}
-                        />
-                        <label
-                          htmlFor="crop_name"
-                          className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
-                        >
-                          Crop Name
-                        </label>
-                      </div>
+                      
                       <div className="relative">
                         <button
                           className="bg-green-500 text-white rounded-md px-2 py-1 "
@@ -196,18 +142,15 @@ export default function RegisterFarmer() {
               </div>
             </div>
           </div>
-          
-
         </form>
       </div>
     </div>
   );
 }
 
-export const farmerRegistrationAction = async ({request, params}) => {
-
+export const addHarvesterAction = async ({request,params}) => {
     const formData = await request.json();
-    const sendDataRequest = await fetch('http://127.0.0.1:8001/RegisterUser', {
+    const sendDataRequest = await fetch('http://127.0.0.1:8001/add_harvester', {
     method: request.method,
     // mode: 'no-cors',
     headers: {

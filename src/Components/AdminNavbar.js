@@ -25,7 +25,7 @@ export default function AdminNavbar() {
         <div className={classes.adminNavHolder}>
           <nav className="mx-auto border border-green-700 top-0 left-0 right-0 z-10 bg-transparent  bg-opacity-100">
             <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
-              <Link className="text-2xl text-secondary-400 md:text-5xl font-semibold">
+              <Link to="/adminHome" className="text-2xl text-secondary-400 md:text-5xl font-semibold">
                 <div className="flex items-center">
                   <p className="text-2xl text-green-700">
                     Agri<span className="text-black">Drone</span>
