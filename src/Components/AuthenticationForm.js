@@ -8,7 +8,6 @@ export default function AuthenticationForm() {
     const segments = path.split('/');
     const pathName = segments[1]; // The word 'user' is at the first index
 
-    console.log(user);
     const [formData,setFormData]=useState({
         email: '',
         password:'',
