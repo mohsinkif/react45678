@@ -7,7 +7,6 @@ import { useActionData } from "react-router-dom";
 export default function RegisterFarmer() {
     
     const data = useActionData();
-    console.log(data? data:null);
     const submit = useSubmit();
     const [formData, setFormData] = useState({
         farmername: '',
