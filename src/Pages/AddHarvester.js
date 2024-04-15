@@ -8,19 +8,11 @@ export default function AddHarvester() {
     const data = useActionData();
     const submit = useSubmit();
     const [formData, setFormData] = useState({
-        farmername: '',
-        farmeremail: '',
-        farmerusername: '',  // Fixed the typo here
-        password: '',
-        farmer_land: '',
-        farmerphonenumber: '',
-        crop_name: '',
         harvester_name: '',
         harvester_phone: '',
         harvester_email: '',
-        transporter_name: '',
-        transporter_email: '',
-        transporter_phone: '',});
+        city:'',
+       });
     
     const handleChange = (e) => {
         setFormData({
