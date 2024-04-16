@@ -7,7 +7,7 @@ export default function DataTable({ data }) {
   const deleteDataHandle =  (event) => {
     
     fetch('http://127.0.0.1:8001/deleteharvester',{
-      method: 'DELETE',
+      method: 'post',
       headers: {
         "Content-Type": "application/json",
       },
