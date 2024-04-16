@@ -10,9 +10,8 @@ export default function DataTable({ data }) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(event.target.value)
+      body: JSON.stringify({data:event.target.value})
     });
-    console.log({data:event.target.value});
   }
   return (
     <div className={classes.tableContainer}>
