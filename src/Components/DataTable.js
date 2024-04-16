@@ -5,7 +5,6 @@ export default function DataTable({ data }) {
 
 
   const deleteDataHandle =  (event) => {
-    
     fetch('http://127.0.0.1:8001/deleteharvester',{
       method: 'delete',
       headers: {
@@ -13,6 +12,9 @@ export default function DataTable({ data }) {
       },
       body: JSON.stringify({harvester_email:event.target.value})
     });
+
+    window.location.reload();
+
   }
   return (
     <div className={classes.tableContainer}>
