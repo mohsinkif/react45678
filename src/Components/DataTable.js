@@ -12,7 +12,7 @@ export default function DataTable({ data }) {
       },
       body: JSON.stringify(event.target.value)
     });
-
+    console.log(event.target.value);
   }
   return (
     <div className={classes.tableContainer}>
