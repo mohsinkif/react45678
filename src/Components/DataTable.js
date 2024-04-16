@@ -30,7 +30,7 @@ export default function DataTable({ data }) {
         <tbody className="bg-white divide-y divide-gray-200">
           {data.map((eachEntry) => {
             return (
-              <tr>
+              <tr key={eachEntry.harvester_phone}>
                 <td className="px-6 py-4 whitespace-nowrap">
                   {eachEntry.harvester_name}
                 </td>
