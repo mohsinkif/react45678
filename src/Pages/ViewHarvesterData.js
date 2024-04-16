@@ -46,7 +46,7 @@ export default function ViewHarvesterData() {
                 </form>
             </div>
             <div className={classes.vhdTableHolder}>
-                {data ? data.map((eachEntry) => {return <DataTable name={eachEntry.harvester_name} phone={phone} email={harvester_email}/>}): null}
+                {data ? <DataTable data={data}/>: null}
             </div>
 
         </div>

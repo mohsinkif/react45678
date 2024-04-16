@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "../CSS/adminPages.module.css";
 
-export default function DataTable({email,phone,name}) {
+export default function DataTable({data}) {
   return (
     <div className={classes.tableContainer}>
       <table class="min-w-full divide-y divide-gray-200">
@@ -13,12 +13,11 @@ export default function DataTable({email,phone,name}) {
     </tr>
   </thead>
   <tbody className="bg-white divide-y divide-gray-200">
-    <tr>
-      <td className="px-6 py-4 whitespace-nowrap">{name}</td>
-      <td className="px-6 py-4 whitespace-nowrap">{email}</td>
-      <td className="px-6 py-4 whitespace-nowrap">{phone}</td>
-    </tr>
-    
+   {data.map((eachEntry)=>{return  <tr>
+      <td className="px-6 py-4 whitespace-nowrap">{eachEntry.harvester_name}</td>
+      <td className="px-6 py-4 whitespace-nowrap">{eachEntry.harvester_email}</td>
+      <td className="px-6 py-4 whitespace-nowrap">{eachEntry.harvester_phone}</td>
+    </tr>})}
   </tbody>
 </table>
 
