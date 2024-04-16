@@ -40,10 +40,7 @@ export default function DataTable({ data }) {
                 <td className="px-6 py-4 whitespace-nowrap">
                   {eachEntry.harvester_phone}
                 </td>
-              </tr>
-            );
-          })}
-          <tr>
+                <td>
             <button class="flex items-center px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 focus:outline-none focus:ring focus:ring-red-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -59,7 +56,11 @@ export default function DataTable({ data }) {
               </svg>
               Delete
             </button>
-          </tr>
+          </td>
+              </tr>
+            );
+          })}
+          
         </tbody>
       </table>
     </div>
