@@ -70,10 +70,10 @@ export const viewDataRequest = async ({request,params}) => {
   });
 
   if(sendViewRequest.ok){
-    const viewRequestData = await sendViewRequest.json();
-    return viewRequestData;
+    return json({message:"There Is No Hrvester In This City", statue:sendViewRequest.status})    
   }
   else {
-    return json({message:"There Is No Hrvester In This City Fuck You", statue:sendViewRequest.status})
+    const viewRequestData = await sendViewRequest.json();
+    return viewRequestData;
   }
 }
