@@ -12,7 +12,7 @@ export default function ViewHarvesterData() {
     const data = useActionData();
     const submit = useSubmit();
 
-    if(data && console.log(data));
+    if(data && console.log(data.detail));
 
     const [formData,setFormData]=useState({
         city: '',})
@@ -68,7 +68,7 @@ export const viewDataRequest = async ({request,params}) => {
     body: JSON.stringify(formData)
   });
 
-  if(sendViewRequest.ok){
+  if(!sendViewRequest.ok){
     return json({message:"There Is No Hrvester In This City", statue:sendViewRequest.status})    
   }
   else {
