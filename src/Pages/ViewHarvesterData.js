@@ -14,8 +14,8 @@ export default function ViewHarvesterData() {
 
     if(data && console.log(data));
     const [formData,setFormData]=useState({
-        email: '',
-        password:'',
+        city: '',
+        
       })
     
     const handleChange = (e) =>{
