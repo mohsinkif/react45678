@@ -12,7 +12,7 @@ export default function ViewHarvesterData() {
     const data = useActionData();
     const submit = useSubmit();
 
-    if(data && console.log(data.detail));
+    if(data && console.log(data));
 
     const [formData,setFormData]=useState({
         city: '',})
