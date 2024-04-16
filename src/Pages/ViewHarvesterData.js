@@ -12,7 +12,6 @@ export default function ViewHarvesterData() {
     const data = useActionData();
     const submit = useSubmit();
 
-    if(data && console.log(data));
 
     const [formData,setFormData]=useState({
         city: '',})
@@ -58,7 +57,6 @@ export default function ViewHarvesterData() {
 export const viewDataRequest = async ({request,params}) => {
 
     const formData = await request.json();
-    console.log(formData);
     const sendViewRequest = await fetch('http://127.0.0.1:8001/viewharvester', {
     method: request.method,
     // mode: 'no-cors',
