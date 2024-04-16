@@ -45,6 +45,8 @@ export default function ViewHarvesterData() {
                 </form>
             </div>
             <div className={classes.vhdTableHolder}>
+{/**                <DataTable data={[]}/>
+ */}
                 {data ? <DataTable data={data}/>: <p className="text-green-600">There are no Values To Show</p>}
             </div>
 
