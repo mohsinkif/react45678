@@ -12,6 +12,7 @@ export default function ViewHarvesterData() {
     const data = useActionData();
     const submit = useSubmit();
 
+    if(data && console.log(data));
     const [formData,setFormData]=useState({
         email: '',
         password:'',
