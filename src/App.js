@@ -11,8 +11,8 @@ import AdminHome from "./Pages/AdminHome";
 import RegisterFarmer,{farmerRegistrationAction} from "./Pages/RegisterFarmer";
 import AddHarvester, {addHarvesterAction} from "./Pages/AddHarvester";
 import AddTransporter, {addTransporterAction} from "./Pages/AddTransporter";
-
-
+import ViewFarmerData from "./Pages/ViewFarmerData";
+import ViewHarvesterData, {viewDataRequest} from "./Pages/ViewHarvesterData";
 
 
 
@@ -32,7 +32,8 @@ function App() {
         {path:'/registerfarmer', element:<RegisterFarmer/>,action:farmerRegistrationAction},
         {path:'/addharvester', element:<AddHarvester/>,action:addHarvesterAction},
         {path:"/addtransporter",element:<AddTransporter/>,action:addTransporterAction},
-
+        {path:"/viewharvesterdata",element:<ViewHarvesterData/>,action:viewDataRequest},
+        {path:"/viewfarmerdata",element:<ViewFarmerData/>},
 
       ]
     }
