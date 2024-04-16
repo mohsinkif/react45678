@@ -26,7 +26,7 @@ export default function ViewHarvesterData() {
     const searchHarvesterHanle = (event) => {
         event.preventDefault(); 
 
-        submit({}, {method:'POST',action: `/${pathName}` ,encType:'application/json'})
+        submit({formData}, {method:'POST',action: `/${pathName}` ,encType:'application/json'})
     }
 
   return (
