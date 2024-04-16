@@ -69,7 +69,7 @@ export const viewDataRequest = async ({request,params}) => {
   });
 
   if(!sendViewRequest.ok){
-    return json({message:"There Is No Hrvester In This City", statue:sendViewRequest.status})    
+    return json({message:"There Is No Hrvester In This City", status:sendViewRequest.status})    
   }
   else {
     const viewRequestData = await sendViewRequest.json();
