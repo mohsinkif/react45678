@@ -23,6 +23,7 @@ export default function ViewHarvesterData() {
     });}
 
     const searchHarvesterHanle = (event) => {
+        event.preventDefault();
         submit({formData}, {method:'POST',action: `/${pathName}` ,encType:'application/json'})
     }
 
