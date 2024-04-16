@@ -13,10 +13,9 @@ export default function ViewHarvesterData() {
     const submit = useSubmit();
 
     if(data && console.log(data));
+
     const [formData,setFormData]=useState({
-        city: '',
-        
-      })
+        city: '',})
     
     const handleChange = (e) =>{
     setFormData({
@@ -24,8 +23,6 @@ export default function ViewHarvesterData() {
     });}
 
     const searchHarvesterHanle = (event) => {
-        event.preventDefault(); 
-
         submit({formData}, {method:'POST',action: `/${pathName}` ,encType:'application/json'})
     }
 
@@ -60,6 +57,7 @@ export default function ViewHarvesterData() {
 export const viewDataRequest = async ({request,params}) => {
 
     const formData = await request.json();
+    console.log(formData);
     const sendViewRequest = await fetch('http://127.0.0.1:8001/viewharvester', {
     method: request.method,
     // mode: 'no-cors',
