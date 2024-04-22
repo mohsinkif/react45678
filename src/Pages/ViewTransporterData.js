@@ -73,6 +73,7 @@ export const viewTransporterDataRequest = async ({request,params}) => {
   }
   else {
     const viewRequestData = await sendViewRequest.json();
+    console.log(viewRequestData);
     return viewRequestData;
   }
 }
