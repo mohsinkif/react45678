@@ -33,7 +33,7 @@ function App() {
         {path:'/addharvester', element:<AddHarvester/>,action:addHarvesterAction},
         {path:"/addtransporter",element:<AddTransporter/>,action:addTransporterAction},
         {path:"/viewharvesterdata",element:<ViewHarvesterData/>,action:viewHarvesterDataRequest},
-        {path:"/viewtransporterdata",element:<ViewTransporterData/>,action:viewTransporterDataRequest},
+        {path:"/viewtransporter",element:<ViewTransporterData/>,action:viewTransporterDataRequest},
         {path:"/viewfarmerdata",element:<ViewFarmerData/>},
 
       ]

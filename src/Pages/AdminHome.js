@@ -40,7 +40,7 @@ export default function AdminHome() {
             </button>
           </Link>
 
-          <Link to="/viewtransporterdata">
+          <Link to="/viewtransporter">
             <button className="rounded px-12 font-bold text-2xl py-5 hover:bg-green-400 bg-green-600 text-white">
               View Transporter Data
             </button>
