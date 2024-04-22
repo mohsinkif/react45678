@@ -3,13 +3,14 @@ import classes from "../CSS/adminPages.module.css";
 
 export default function DataTable({ data, pathName }) {
   const endpoint = (pathName === 'viewtransporter' && 'deletetransporter') || (pathName === 'vieharvesterdata' && 'deleteharvester') || (pathName === 'viewfarmer' && 'deletefarmer')
+  const emailVariableForDeletion = (pathName === 'viewtransporter' && 'transporter_email') || (pathName === 'vieharvesterdata' && 'harvester_email') || (pathName === 'viewfarmer' && 'farmeremail')
   const deleteDataHandle = (event) => {
     fetch(`http://127.0.0.1:8001/${endpoint}`, {
       method: "delete",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ transporter_email: event.target.value }),
+      body: JSON.stringify({ emailVariableForDeletion: event.target.value }),
     });
 
     window.location.reload();
