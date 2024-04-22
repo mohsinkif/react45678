@@ -11,9 +11,9 @@ import AdminHome from "./Pages/AdminHome";
 import RegisterFarmer,{farmerRegistrationAction} from "./Pages/RegisterFarmer";
 import AddHarvester, {addHarvesterAction} from "./Pages/AddHarvester";
 import AddTransporter, {addTransporterAction} from "./Pages/AddTransporter";
-import ViewFarmerData from "./Pages/ViewFarmerData";
-import ViewHarvesterData, {viewHarvesterDataRequest} from "./Pages/ViewHarvesterData";
-import ViewTransporterData,{viewTransporterDataRequest} from "./Pages/ViewTransporterData";
+import ViewFarmerData,{viewFarmerDataAction} from "./Pages/ViewFarmerData";
+import ViewHarvesterData, {viewHarvesterDataAction} from "./Pages/ViewHarvesterData";
+import ViewTransporterData,{viewTransporterDataAction} from "./Pages/ViewTransporterData";
 
 
 function App() {
@@ -32,9 +32,9 @@ function App() {
         {path:'/registerfarmer', element:<RegisterFarmer/>,action:farmerRegistrationAction},
         {path:'/addharvester', element:<AddHarvester/>,action:addHarvesterAction},
         {path:"/addtransporter",element:<AddTransporter/>,action:addTransporterAction},
-        {path:"/viewharvesterdata",element:<ViewHarvesterData/>,action:viewHarvesterDataRequest},
-        {path:"/viewtransporter",element:<ViewTransporterData/>,action:viewTransporterDataRequest},
-        {path:"/viewfarmerdata",element:<ViewFarmerData/>},
+        {path:"/viewharvesterdata",element:<ViewHarvesterData/>,action:viewHarvesterDataAction},
+        {path:"/viewtransporter",element:<ViewTransporterData/>,action:viewTransporterDataAction},
+        {path:"/viewfarmerdata",element:<ViewFarmerData/>,action:viewFarmerDataAction},
 
       ]
     }

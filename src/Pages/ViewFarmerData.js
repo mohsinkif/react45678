@@ -14,7 +14,7 @@ export default function ViewFarmerData() {
 
 
     const [formData,setFormData]=useState({
-        city: '',})
+        farmeremail: '',})
     
     const handleChange = (e) =>{
     setFormData({
@@ -23,7 +23,7 @@ export default function ViewFarmerData() {
 
     const searchHarvesterHanle = (event) => {
         event.preventDefault();
-        submit({city:formData.city}, {method:'post',action: `/${pathName}` ,encType:'application/json'})
+        submit({farmeremail:formData.farmeremail}, {method:'post',action: `/${pathName}` ,encType:'application/json'})
     }
 
   return (
@@ -34,8 +34,8 @@ export default function ViewFarmerData() {
                     <div className="divide-y divide-gray-200">
                       <div className="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
                         <div className="relative">
-                          <input required autoComplete="off" id="city" name="city" type="text" className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-rose-600" placeholder="City Name" onChange={handleChange} />
-                          <label htmlFor="city" className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">City Name</label>
+                          <input required autoComplete="off" id="farmeremail" name="farmeremail" type="text" className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-rose-600" placeholder="Farmer Email" onChange={handleChange} />
+                          <label htmlFor="farmeremail" className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Farmer Email</label>
                         </div>
                         <div className="relative">
                           <button type='submit' className="bg-green-500 text-white rounded-md px-2 py-1" >Search</button>
@@ -56,10 +56,10 @@ export default function ViewFarmerData() {
 }
 
 
-export const viewHarvesterDataRequest = async ({request,params}) => {
+export const viewFarmerDataAction = async ({request,params}) => {
 
   const formData = await request.json();
-  const sendViewRequest = await fetch('http://127.0.0.1:8001/viewharvester', {
+  const sendViewRequest = await fetch('http://127.0.0.1:8001/viewfarmer', {
   method: request.method,
   // mode: 'no-cors',
   headers: {

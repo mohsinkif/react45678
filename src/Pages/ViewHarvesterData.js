@@ -56,7 +56,7 @@ export default function ViewHarvesterData() {
 }
 
 
-export const viewHarvesterDataRequest = async ({request,params}) => {
+export const viewHarvesterDataAction = async ({request,params}) => {
 
     const formData = await request.json();
     const sendViewRequest = await fetch('http://127.0.0.1:8001/viewharvester', {

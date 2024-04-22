@@ -57,7 +57,7 @@ export default function ViewTransporterData() {
 }
 
 
-export const viewTransporterDataRequest = async ({request,params}) => {
+export const viewTransporterDataAction = async ({request,params}) => {
 
     const formData = await request.json();
     const sendViewRequest = await fetch('http://127.0.0.1:8001/viewtransporter', {
