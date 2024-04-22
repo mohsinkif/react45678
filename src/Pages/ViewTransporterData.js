@@ -19,10 +19,11 @@ export default function ViewTransporterData() {
     const handleChange = (e) =>{
     setFormData({
         ...formData,[e.target.name]:e.target.value,
-    });}
+    });console.log(e.target.value)}
 
     const searchHarvesterHanle = (event) => {
         event.preventDefault();
+        console.log(formData.tcity)
         submit({tcity:formData.tcity}, {method:'post',action: `/${pathName}` ,encType:'application/json'})
     }
 
