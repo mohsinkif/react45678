@@ -10,7 +10,7 @@ export default function ViewFarmerData() {
     const pathName = segments[1]; 
     const data = useActionData();
     const submit = useSubmit();
-    const arrayOfFarmerData = [data];
+    let arrayOfFarmerData = [data];
 
     const [formData,setFormData]=useState({
         farmeremail: '',})
