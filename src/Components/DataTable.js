@@ -53,27 +53,15 @@ export default function DataTable({ data, pathName }) {
               return (
                 <tr key={eachEntry.harvester_phone}>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    {(pathName === "viewtransporter" &&
-                      eachEntry.transporter_name) ||
-                      (pathName === "viewharvesterdata" &&
-                        eachEntry.harvester_name) ||
-                      (pathName === "viewfarmer" && eachEntry.farmername) ||
-                      "Fallback Value"}{" "}
+                    {
+                      (pathName === "viewfarmer" && eachEntry.farmername) }
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    {(pathName === "viewtransporter" &&
-                      eachEntry.transporter_email) ||
-                      (pathName === "viewharvesterdata" &&
-                        eachEntry.transporter_email) ||
-                      eachEntry.harvester_email ||
+                    {
                       (pathName === "viewfarmer" && eachEntry.farmeremail)}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    {(pathName === "viewtransporter" &&
-                      eachEntry.transporter_phone) ||
-                      (pathName === "viewharvesterdata" &&
-                        eachEntry.transporter_phone) ||
-                      eachEntry.harvester_phone ||
+                    {
                       (pathName === "viewfarmer" &&
                         eachEntry.farmerphonenumber)}
                   </td>
