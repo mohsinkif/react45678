@@ -10,7 +10,7 @@ export default function ViewFarmerData() {
     const pathName = segments[1]; 
     const data = useActionData();
     const submit = useSubmit();
-
+    const arrayOfFarmerData = [data];
 
     const [formData,setFormData]=useState({
         farmeremail: '',})
@@ -46,7 +46,7 @@ export default function ViewFarmerData() {
             <div className={classes.vhdTableHolder}>
 {/**                <DataTable data={[]}/>
  */}
-                {data ? <DataTable data={data} pathName={pathName}/>: <p className="text-green-600">There are no Values To Show</p>}
+                {data ? <DataTable data={arrayOfFarmerData} pathName={pathName}/>: <p className="text-green-600">There are no Values To Show</p>}
             </div>
 
         </div>
