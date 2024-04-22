@@ -46,17 +46,7 @@ export default function AdminHome() {
             </button>
           </Link>
 
-          <Link to="/deleteharvester">
-            <button className="rounded px-12 font-bold text-2xl py-5 hover:bg-green-400 bg-green-600 text-white">
-              Delete Harvester Data
-            </button>
-          </Link>
-
-          <Link to="/deletetransporter">
-            <button className="rounded px-12 font-bold text-2xl py-5 hover:bg-green-400 bg-green-600 text-white">
-              Delete Transporter Data
-            </button>
-          </Link>
+          
 
           <Link to="/updatefarmer">
             <button className="rounded px-12 font-bold text-2xl py-5 hover:bg-green-400 bg-green-600 text-white">
