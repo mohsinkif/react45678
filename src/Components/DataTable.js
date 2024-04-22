@@ -44,6 +44,22 @@ export default function DataTable({ data, pathName }) {
                 (pathName === "viewharvesterdata" && "Harvester Phone") ||
                 (pathName === "viewfarmer" && "Farmer Phone")}
             </th>
+            {pathName === "viewfarmer" && (
+              <th
+                scope="col"
+                className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+              >
+                Farmer Username
+              </th>
+            )}
+            {pathName === "viewfarmer" && (
+              <th
+                scope="col"
+                className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+              >
+                Farmer Land
+              </th>
+            )}
           </tr>
         </thead>
         <tbody className="bg-white divide-y divide-gray-200">
@@ -57,7 +73,7 @@ export default function DataTable({ data, pathName }) {
                       eachEntry.transporter_name) ||
                       (pathName === "viewharvesterdata" &&
                         eachEntry.harvester_name) ||
-                      (pathName === "viewfarmer" && eachEntry.farmername)} 
+                      (pathName === "viewfarmer" && eachEntry.farmername)}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     {(pathName === "viewtransporter" &&
@@ -74,9 +90,21 @@ export default function DataTable({ data, pathName }) {
                       (pathName === "viewfarmer" &&
                         eachEntry.farmerphonenumber)}
                   </td>
-                  {pathName === 'viewfarmer' && <td className="px-6 py-4 whitespace-nowrap">{eachEntry.farmerusername}</td>}
-                  {pathName === 'viewfarmer' && <td className="px-6 py-4 whitespace-nowrap">{eachEntry.password}</td>}
-                  {pathName === 'viewfarmer' && <td className="px-6 py-4 whitespace-nowrap">{eachEntry.farmer_land}</td>}
+                  {pathName === "viewfarmer" && (
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      {eachEntry.farmerusername}
+                    </td>
+                  )}
+                  {pathName === "viewfarmer" && (
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      {eachEntry.password}
+                    </td>
+                  )}
+                  {pathName === "viewfarmer" && (
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      {eachEntry.farmer_land}
+                    </td>
+                  )}
 
                   <td>
                     <button
