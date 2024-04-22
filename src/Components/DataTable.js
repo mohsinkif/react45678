@@ -16,6 +16,8 @@ export default function DataTable({ data }) {
     window.location.reload();
 
   }
+
+  console.log(data);
   return (
     <div className={classes.tableContainer}>
       <table className="min-w-full divide-y divide-gray-200">
