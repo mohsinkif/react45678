@@ -34,7 +34,7 @@ function App() {
         {path:"/addtransporter",element:<AddTransporter/>,action:addTransporterAction},
         {path:"/viewharvesterdata",element:<ViewHarvesterData/>,action:viewHarvesterDataAction},
         {path:"/viewtransporter",element:<ViewTransporterData/>,action:viewTransporterDataAction},
-        {path:"/viewfarmerdata",element:<ViewFarmerData/>,action:viewFarmerDataAction},
+        {path:"/viewfarmer",element:<ViewFarmerData/>,action:viewFarmerDataAction},
 
       ]
     }
