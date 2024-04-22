@@ -2,8 +2,9 @@ import React from "react";
 import classes from "../CSS/adminPages.module.css";
 
 export default function DataTable({ data, pathName }) {
+  const endpoint = (pathName === 'viewtransporter' && 'deletetransporter') || (pathName === 'vieharvesterdata' && 'deleteharvester') || (pathName === 'viewfarmer' && 'deletefarmer')
   const deleteDataHandle = (event) => {
-    fetch("http://127.0.0.1:8001/deletetransporter", {
+    fetch(`http://127.0.0.1:8001/${endpoint}`, {
       method: "delete",
       headers: {
         "Content-Type": "application/json",
@@ -95,7 +96,7 @@ export default function DataTable({ data, pathName }) {
                       {eachEntry.farmerusername}
                     </td>
                   )}
-                  
+
                   {pathName === "viewfarmer" && (
                     <td className="px-6 py-4 whitespace-nowrap">
                       {eachEntry.farmer_land}
