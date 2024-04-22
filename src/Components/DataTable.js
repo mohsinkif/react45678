@@ -2,10 +2,20 @@ import React from "react";
 import classes from "../CSS/adminPages.module.css";
 
 export default function DataTable({ data, pathName }) {
-  const endpoint = (pathName === 'viewtransporter' && 'deletetransporter') || (pathName === 'viewharvesterdata' && 'deleteharvester') || (pathName === 'viewfarmer' && 'deletefarmer')
+  const endpoint =
+    (pathName === "viewtransporter" && "deletetransporter") ||
+    (pathName === "viewharvesterdata" && "deleteharvester") ||
+    (pathName === "viewfarmer" && "deletefarmer");
   const deleteDataHandle = (event) => {
     event.preventDefault();
-    const body = (pathName === 'viewtransporter' && { transporter_email: event.target.value }) || (pathName === 'viewharvesterdata' && { harvester_email: event.target.value }) || (pathName === 'viewfarmer' && { farmeremail: event.target.value })
+    const body =
+      (pathName === "viewtransporter" && {
+        transporter_email: event.target.value,
+      }) ||
+      (pathName === "viewharvesterdata" && {
+        harvester_email: event.target.value,
+      }) ||
+      (pathName === "viewfarmer" && { farmeremail: event.target.value });
     fetch(`http://127.0.0.1:8001/${endpoint}`, {
       method: "delete",
       headers: {
@@ -15,7 +25,6 @@ export default function DataTable({ data, pathName }) {
     });
 
     window.location.reload();
-    
   };
 
   console.log(data);
@@ -110,9 +119,11 @@ export default function DataTable({ data, pathName }) {
                     <button
                       onClick={deleteDataHandle}
                       value={
-                        (pathName === "viewtransporter"
-                          && eachEntry.transporter_email)
-                        || (pathName === 'viewharvesterdata' && eachEntry.harvester_email) || (pathName === 'viewfarmer' && eachEntry.farmeremail)
+                        (pathName === "viewtransporter" &&
+                          eachEntry.transporter_email) ||
+                        (pathName === "viewharvesterdata" &&
+                          eachEntry.harvester_email) ||
+                        (pathName === "viewfarmer" && eachEntry.farmeremail)
                       }
                       class="flex items-center px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 focus:outline-none focus:ring focus:ring-red-300"
                     >
