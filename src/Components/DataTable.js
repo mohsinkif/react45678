@@ -2,8 +2,8 @@ import React from "react";
 import classes from "../CSS/adminPages.module.css";
 
 export default function DataTable({ data, pathName }) {
-  const endpoint = (pathName === 'viewtransporter' && 'deletetransporter') || (pathName === 'vieharvesterdata' && 'deleteharvester') || (pathName === 'viewfarmer' && 'deletefarmer')
-  const emailVariableForDeletion = (pathName === 'viewtransporter' && 'transporter_email') || (pathName === 'vieharvesterdata' && 'harvester_email') || (pathName === 'viewfarmer' && 'farmeremail')
+  const endpoint = (pathName === 'viewtransporter' && 'deletetransporter') || (pathName === 'viewharvesterdata' && 'deleteharvester') || (pathName === 'viewfarmer' && 'deletefarmer')
+  const emailVariableForDeletion = (pathName === 'viewtransporter' && 'transporter_email') || (pathName === 'viewharvesterdata' && 'harvester_email') || (pathName === 'viewfarmer' && 'farmeremail')
   console.log(emailVariableForDeletion)
   console.log(endpoint);
   const deleteDataHandle = (event) => {
