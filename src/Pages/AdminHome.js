@@ -47,14 +47,6 @@ export default function AdminHome() {
           </Link>
 
           
-
-          <Link to="/updatefarmer">
-            <button className="rounded px-12 font-bold text-2xl py-5 hover:bg-green-400 bg-green-600 text-white">
-              Update Farmer Data
-            </button>
-          </Link>
-
-          
         </div>
       </div>
     </div>
