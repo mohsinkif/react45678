@@ -33,7 +33,7 @@ export default function DataTable({ data,pathName }) {
               scope="col"
               className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
             >
-              {pathName === 'viewtransporter'? 'Harvester Email' :'Harvester Email'}
+              {pathName === 'viewtransporter'? 'Transporter Email' :'Harvester Email'}
             </th>
             <th
               scope="col"
@@ -51,7 +51,7 @@ export default function DataTable({ data,pathName }) {
                   {pathName === 'viewtransporter'? eachEntry.transporter_name :eachEntry.harvester_name}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
-                  {pathName === 'viewtransporter'? eachEntry.email : eachEntry.harvester_email}
+                  {pathName === 'viewtransporter'? eachEntry.transporter_email : eachEntry.harvester_email}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
                   {pathName === 'viewtransporter'? eachEntry.transporter_phone :eachEntry.harvester_phone}
