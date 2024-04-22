@@ -44,7 +44,7 @@ export default function DataTable({ data,pathName }) {
           </tr>
         </thead>
         <tbody className="bg-white divide-y divide-gray-200">
-          {data && data.length >0 && data.map((eachEntry) => {
+          {data && data.length > 0 && data.map((eachEntry) => {
             return (
               <tr key={eachEntry.harvester_phone}>
                 <td className="px-6 py-4 whitespace-nowrap">
