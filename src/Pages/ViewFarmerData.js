@@ -8,7 +8,6 @@ export default function ViewFarmerData() {
     const path = location.pathname;
     const segments = path.split('/');
     const pathName = segments[1]; 
-console.log(pathName)
     const data = useActionData();
     const submit = useSubmit();
 
