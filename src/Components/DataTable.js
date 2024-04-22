@@ -5,7 +5,7 @@ export default function DataTable({ data, pathName }) {
   const endpoint = (pathName === 'viewtransporter' && 'deletetransporter') || (pathName === 'viewharvesterdata' && 'deleteharvester') || (pathName === 'viewfarmer' && 'deletefarmer')
   const deleteDataHandle = (event) => {
     event.preventDefault();
-    const body = (pathName === 'viewtransporter' && { 'transporter_email': event.target.value }) || (pathName === 'viewharvesterdata' && { 'harvester_email': event.target.value }) || (pathName === 'viewfarmer' && { 'farmeremail': event.target.value })
+    const body = (pathName === 'viewtransporter' && { transporter_email: event.target.value }) || (pathName === 'viewharvesterdata' && { harvester_email: event.target.value }) || (pathName === 'viewfarmer' && { farmeremail: event.target.value })
     fetch(`http://127.0.0.1:8001/${endpoint}`, {
       method: "delete",
       headers: {
