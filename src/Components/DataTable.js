@@ -107,9 +107,9 @@ export default function DataTable({ data, pathName }) {
                     <button
                       onClick={deleteDataHandle}
                       value={
-                        pathName === "viewtransporter"
-                          ? eachEntry.transporter_email
-                          : eachEntry.harvester_email
+                        (pathName === "viewtransporter"
+                          && eachEntry.transporter_email)
+                        || (pathName === 'viewharvesterdata' && eachEntry.harvester_email) || (pathName === 'viewfarmer' && eachEntry.farmeremail)
                       }
                       class="flex items-center px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 focus:outline-none focus:ring focus:ring-red-300"
                     >
