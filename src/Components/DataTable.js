@@ -74,6 +74,9 @@ export default function DataTable({ data, pathName }) {
                       (pathName === "viewfarmer" &&
                         eachEntry.farmerphonenumber)}
                   </td>
+                  {pathName === 'viewfarmer' && <td className="px-6 py-4 whitespace-nowrap">{eachEntry.farmerusername}</td>}
+                  {pathName === 'viewfarmer' && <td className="px-6 py-4 whitespace-nowrap">{eachEntry.password}</td>}
+                  {pathName === 'viewfarmer' && <td className="px-6 py-4 whitespace-nowrap">{eachEntry.farmer_land}</td>}
 
                   <td>
                     <button
