@@ -12,7 +12,7 @@ export default function DataTable({ data, pathName }) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ emailVariableForDeletion: event.target.value }),
+      body: JSON.stringify({ transporter_email: event.target.value }),
     });
 
     window.location.reload();
