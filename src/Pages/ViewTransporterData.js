@@ -48,7 +48,7 @@ export default function ViewTransporterData() {
             <div className={classes.vhdTableHolder}>
 {/**                <DataTable data={[]}/>
  */}
-                {data ? <DataTable data={data}/>: <p className="text-green-600">There are no Values To Show</p>}
+                {data ? <DataTable data={data} pathName={pathName}/>: <p className="text-green-600">There are no Values To Show</p>}
             </div>
 
         </div>

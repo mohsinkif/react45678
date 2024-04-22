@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "../CSS/adminPages.module.css";
 
-export default function DataTable({ data }) {
+export default function DataTable({ data,pathName }) {
 
 
   const deleteDataHandle =  (event) => {
@@ -27,19 +27,19 @@ export default function DataTable({ data }) {
               scope="col"
               className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
             >
-              Harvester Name
+              {pathName === 'viewtransporter'? 'Transporter Name' :'Harvester Name'}
             </th>
             <th
               scope="col"
               className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
             >
-              Harvester Email
+              {pathName === 'viewtransporter'? 'Harvester Email' :'Harvester Email'}
             </th>
             <th
               scope="col"
               className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
             >
-              Harvester Contact
+              {pathName === 'viewtransporter'? 'Transporter Contact' :'Harvester Contact'}
             </th>
           </tr>
         </thead>
@@ -48,13 +48,13 @@ export default function DataTable({ data }) {
             return (
               <tr key={eachEntry.harvester_phone}>
                 <td className="px-6 py-4 whitespace-nowrap">
-                  {eachEntry.harvester_name}
+                  {pathName === 'viewtransporter'? eachEntry.transporter_name :eachEntry.harvester_name}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
-                  {eachEntry.harvester_email}
+                  {pathName === 'viewtransporter'? eachEntry.email : eachEntry.harvester_email}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
-                  {eachEntry.harvester_phone}
+                  {pathName === 'viewtransporter'? eachEntry.transporter_phone :eachEntry.harvester_phone}
                 </td>
                 <td>
                   <button onClick={deleteDataHandle} value={eachEntry.harvester_email} class="flex items-center px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 focus:outline-none focus:ring focus:ring-red-300">
