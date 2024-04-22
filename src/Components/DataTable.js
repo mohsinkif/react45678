@@ -48,14 +48,22 @@ export default function DataTable({ data,pathName }) {
             return (
               <tr key={eachEntry.harvester_phone}>
                 <td className="px-6 py-4 whitespace-nowrap">
-                  {pathName === 'viewtransporter'? eachEntry.transporter_name :eachEntry.harvester_name}
+                  {pathName === 'viewtransporter'? eachEntry.transporter_name :eachEntry.harvester_name || pathName === 'viewfarmer' && eachEntry.farmername}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
-                  {pathName === 'viewtransporter'? eachEntry.transporter_email : eachEntry.harvester_email}
+                  {pathName === 'viewtransporter'? eachEntry.transporter_email : eachEntry.harvester_email || pathName === 'viewfarmer' && eachEntry.farmeremail}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
-                  {pathName === 'viewtransporter'? eachEntry.transporter_phone :eachEntry.harvester_phone}
+                  {pathName === 'viewtransporter'? eachEntry.transporter_phone :eachEntry.harvester_phone || pathName === 'viewfarmer' && eachEntry.farmerphonenumber }
                 </td>
+                {
+                  pathName === 'viewfarmer' && <td className="px-6 py-4 whitespace-nowrap"> {eachEntry.farmerusername}</td>
+                }
+                {
+                  pathName === 'viewfarmer' && <td className="px-6 py-4 whitespace-nowrap"> {eachEntry.password}</td>
+                }{
+                  pathName === 'viewfarmer' && <td className="px-6 py-4 whitespace-nowrap"> {eachEntry.farmer_land}</td>
+                }
                 <td>
                   <button onClick={deleteDataHandle} value={pathName === 'viewtransporter'? eachEntry.transporter_email :eachEntry.harvester_email} class="flex items-center px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 focus:outline-none focus:ring focus:ring-red-300">
                     <svg
