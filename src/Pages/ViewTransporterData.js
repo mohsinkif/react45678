@@ -3,7 +3,7 @@ import classes from "../CSS/adminPages.module.css";
 import { useActionData, useSubmit,useLocation, json } from 'react-router-dom';
 import DataTable from '../Components/DataTable';
 
-export default function ViewHarvesterData() {
+export default function ViewTransporterData() {
     const location = useLocation();
     const path = location.pathname;
     const segments = path.split('/');
@@ -56,10 +56,10 @@ export default function ViewHarvesterData() {
 }
 
 
-export const viewHarvesterDataRequest = async ({request,params}) => {
+export const viewTransporterDataRequest = async ({request,params}) => {
 
     const formData = await request.json();
-    const sendViewRequest = await fetch('http://127.0.0.1:8001/viewharvester', {
+    const sendViewRequest = await fetch('http://127.0.0.1:8001/viewtransporter', {
     method: request.method,
     // mode: 'no-cors',
     headers: {
@@ -69,7 +69,7 @@ export const viewHarvesterDataRequest = async ({request,params}) => {
   });
 
   if(!sendViewRequest.ok){
-    return json({message:"There Is No Hrvester In This City", status:sendViewRequest.status})    
+    return json({message:"There Is No Transporter In This City", status:sendViewRequest.status})    
   }
   else {
     const viewRequestData = await sendViewRequest.json();
