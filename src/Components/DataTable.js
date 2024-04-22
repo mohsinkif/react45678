@@ -57,7 +57,7 @@ export default function DataTable({ data,pathName }) {
                   {pathName === 'viewtransporter'? eachEntry.transporter_phone :eachEntry.harvester_phone}
                 </td>
                 <td>
-                  <button onClick={deleteDataHandle} value={eachEntry.harvester_email} class="flex items-center px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 focus:outline-none focus:ring focus:ring-red-300">
+                  <button onClick={deleteDataHandle} value={eachEntry.transporter_email} class="flex items-center px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 focus:outline-none focus:ring focus:ring-red-300">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-5 w-5 mr-2"
