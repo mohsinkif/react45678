@@ -73,6 +73,8 @@ if(!sendViewRequest.ok){
 }
 else {
   const viewRequestData = await sendViewRequest.json();
+  console.log(viewRequestData);
+
   return viewRequestData;
 }
 }
