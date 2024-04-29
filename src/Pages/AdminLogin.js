@@ -9,6 +9,9 @@ export default function AdminLogin() {
   )
 }
 
+
+
+
 export const adminLoginAction = async ({ request, params }) => {
   
   const formData = await request.json();
@@ -30,12 +33,10 @@ export const adminLoginAction = async ({ request, params }) => {
     date.setTime(date.getTime() + (2 * 24 * 60 * 60 * 1000));
     var expires = "; expires=" + date.toUTCString();
     const loginRequestData = await loginRequest.json();
-    document.cookie = "token" + "=" + (loginRequestData.token || "") + expires + "; path=/"; 
+    document.cookie = "adminToken" + "=" + (loginRequestData.token || "") + expires + "; path=/"; 
 
+    return redirect('/adminHome')
   }
 
-  return redirect('/adminHome')
 
-
-  
 }
