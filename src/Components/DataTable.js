@@ -4,7 +4,7 @@ import classes from "../CSS/adminPages.module.css";
 export default function DataTable({ data, pathName }) {
   const endpoint =
     (pathName === "/adminHome/viewtransporter" && "deletetransporter") ||
-    (pathName === "/adminHome/viewharvesterdata" && "deleteharvester") ||
+    (pathName === "viewharvesterdata" && "deleteharvester") ||
     (pathName === "/adminHome/viewfarmer" && "deletefarmer");
   const deleteDataHandle = (event) => {
     event.preventDefault();
@@ -12,7 +12,7 @@ export default function DataTable({ data, pathName }) {
       (pathName === "/adminHome/viewtransporter" && {
         transporter_email: event.target.value,
       }) ||
-      (pathName === "/adminHome/viewharvesterdata" && {
+      (pathName === "viewharvesterdata" && {
         harvester_email: event.target.value,
       }) ||
       (pathName === "/adminHome/viewfarmer" && { farmeremail: event.target.value });
@@ -38,7 +38,7 @@ export default function DataTable({ data, pathName }) {
               className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
             >
               {(pathName === "/adminHome/viewtransporter" && "Transporter Name") ||
-                (pathName === "/adminHome/viewharvesterdata" && "Harvester Name") ||
+                (pathName === "viewharvesterdata" && "Harvester Name") ||
                 (pathName === "/adminHome/viewfarmer" && "Farmer Name")}
             </th>
             <th
