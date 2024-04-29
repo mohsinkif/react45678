@@ -22,7 +22,7 @@ export default function ViewFarmerData() {
 
     const searchHarvesterHanle = (event) => {
         event.preventDefault();
-        submit({farmeremail:formData.farmeremail}, {method:'post',action: `adminHome/${pathName}` ,encType:'application/json'})
+        submit({farmeremail:formData.farmeremail}, {method:'post',action: `/adminHome/${pathName}` ,encType:'application/json'})
     }
 
   return (
