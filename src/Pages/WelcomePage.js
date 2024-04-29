@@ -21,12 +21,17 @@ export default function WelcomePage() {
 }
 
 export const welcomeLoader = async () => {
-  const tokenExist = document.cookie.split(';').some((item) => item.trim().startsWith("token" + '='));
-  if(tokenExist){
-    return redirect("/home");
+  const userToken = document.cookie.split(';').some((item) => item.trim().startsWith("token" + '='));
+  const adminToken = document.cookie.split(';').some((item) => item.trim().startsWith("adminToken" + '='));
+
+  if(userToken){
+    return redirect('/userhome');
   }
-  else {
-    return null;
+  else if(adminToken) {
+    return redirect('/adminHome');
+  }
+  else{
+    return null
   }
 }
 

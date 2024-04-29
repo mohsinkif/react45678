@@ -2,7 +2,7 @@ import WelcomePage, { welcomeLoader } from "./Pages/WelcomePage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import UserLogin, { loginAction, loginLoaderFunction } from "./Pages/UserLogin";
-import AdminLogin, { adminLoginAction, adminSignedInLoader  } from "./Pages/AdminLogin";
+import AdminLogin, { adminLoginAction, adminloginloader  } from "./Pages/AdminLogin";
 import Home, { homePageLoaderFunction } from "./Pages/Home";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
@@ -43,6 +43,7 @@ function App() {
         
         {
           path: "/adminLogin",    
+          loader:welcomeLoader,
           action: adminLoginAction,          
            children:[
             {
@@ -98,7 +99,7 @@ function App() {
           ],
         },
         {
-          path:'/home', 
+          path:'/userhome', 
           loader:homePageLoaderFunction,  
           children:[
             {index:true,element:<Home/>,},                     

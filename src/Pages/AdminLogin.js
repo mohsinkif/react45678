@@ -40,3 +40,13 @@ export const adminLoginAction = async ({ request, params }) => {
 
 
 }
+
+export const adminloginloader = async ({ request, params }) => {
+  const cookieExists = document.cookie.split(';').some(cookie => cookie.trim().startsWith('adminToken'));
+  if(cookieExists){
+    return null
+  }
+  else {
+    return redirect('/adminHome')
+  }
+}
