@@ -3,19 +3,19 @@ import classes from "../CSS/adminPages.module.css";
 
 export default function DataTable({ data, pathName }) {
   const endpoint =
-    (pathName === "adminHome/viewtransporter" && "deletetransporter") ||
-    (pathName === "adminHome/viewharvesterdata" && "deleteharvester") ||
-    (pathName === "adminHome/viewfarmer" && "deletefarmer");
+    (pathName === "/adminHome/viewtransporter" && "deletetransporter") ||
+    (pathName === "/adminHome/viewharvesterdata" && "deleteharvester") ||
+    (pathName === "/adminHome/viewfarmer" && "deletefarmer");
   const deleteDataHandle = (event) => {
     event.preventDefault();
     const body =
-      (pathName === "adminHome/viewtransporter" && {
+      (pathName === "/adminHome/viewtransporter" && {
         transporter_email: event.target.value,
       }) ||
-      (pathName === "adminHome/viewharvesterdata" && {
+      (pathName === "/adminHome/viewharvesterdata" && {
         harvester_email: event.target.value,
       }) ||
-      (pathName === "adminHome/viewfarmer" && { farmeremail: event.target.value });
+      (pathName === "/adminHome/viewfarmer" && { farmeremail: event.target.value });
     fetch(`http://127.0.0.1:8001/${endpoint}`, {
       method: "delete",
       headers: {
@@ -37,27 +37,27 @@ export default function DataTable({ data, pathName }) {
               scope="col"
               className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
             >
-              {(pathName === "adminHome/viewtransporter" && "Transporter Name") ||
-                (pathName === "adminHome/viewharvesterdata" && "Harvester Name") ||
-                (pathName === "adminHome/viewfarmer" && "Farmer Name")}
+              {(pathName === "/adminHome/viewtransporter" && "Transporter Name") ||
+                (pathName === "/adminHome/viewharvesterdata" && "Harvester Name") ||
+                (pathName === "/adminHome/viewfarmer" && "Farmer Name")}
             </th>
             <th
               scope="col"
               className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
             >
-              {(pathName === "adminHome/viewtransporter" && "Transporter Email") ||
-                (pathName === "adminHome/viewharvesterdata" && "Harvester Email") ||
-                (pathName === "adminHome/viewfarmer" && "Farmer Email")}
+              {(pathName === "/adminHome/viewtransporter" && "Transporter Email") ||
+                (pathName === "/adminHome/viewharvesterdata" && "Harvester Email") ||
+                (pathName === "/adminHome/viewfarmer" && "Farmer Email")}
             </th>
             <th
               scope="col"
               className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
             >
-              {(pathName === "adminHome/viewtransporter" && "Transporter Phone") ||
-                (pathName === "adminHome/viewharvesterdata" && "Harvester Phone") ||
-                (pathName === "adminHome/viewfarmer" && "Farmer Phone")}
+              {(pathName === "/adminHome/viewtransporter" && "Transporter Phone") ||
+                (pathName === "/adminHome/viewharvesterdata" && "Harvester Phone") ||
+                (pathName === "/adminHome/viewfarmer" && "Farmer Phone")}
             </th>
-            {pathName === "adminHome/viewfarmer" && (
+            {pathName === "/adminHome/viewfarmer" && (
               <th
                 scope="col"
                 className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
@@ -65,7 +65,7 @@ export default function DataTable({ data, pathName }) {
                 Farmer Username
               </th>
             )}
-            {pathName === "adminHome/viewfarmer" && (
+            {pathName === "/adminHome/viewfarmer" && (
               <th
                 scope="col"
                 className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
@@ -82,34 +82,34 @@ export default function DataTable({ data, pathName }) {
               return (
                 <tr key={eachEntry.harvester_phone}>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    {(pathName === "adminHome/viewtransporter" &&
+                    {(pathName === "/adminHome/viewtransporter" &&
                       eachEntry.transporter_name) ||
-                      (pathName === "adminHome/viewharvesterdata" &&
+                      (pathName === "/adminHome/viewharvesterdata" &&
                         eachEntry.harvester_name) ||
-                      (pathName === "adminHome/viewfarmer" && eachEntry.farmername)}
+                      (pathName === "/adminHome/viewfarmer" && eachEntry.farmername)}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    {(pathName === "adminHome/viewtransporter" &&
+                    {(pathName === "/adminHome/viewtransporter" &&
                       eachEntry.transporter_email) ||
-                      (pathName === "adminHome/viewharvesterdata" &&
+                      (pathName === "/adminHome/viewharvesterdata" &&
                         eachEntry.harvester_email) ||
-                      (pathName === "adminHome/viewfarmer" && eachEntry.farmeremail)}
+                      (pathName === "/adminHome/viewfarmer" && eachEntry.farmeremail)}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    {(pathName === "adminHome/viewtransporter" &&
+                    {(pathName === "/adminHome/viewtransporter" &&
                       eachEntry.transporter_phone) ||
-                      (pathName === "adminHome/viewharvesterdata" &&
+                      (pathName === "/adminHome/viewharvesterdata" &&
                         eachEntry.harvester_phone) ||
-                      (pathName === "adminHome/viewfarmer" &&
+                      (pathName === "/adminHome/viewfarmer" &&
                         eachEntry.farmerphonenumber)}
                   </td>
-                  {pathName === "adminHome/viewfarmer" && (
+                  {pathName === "/adminHome/viewfarmer" && (
                     <td className="px-6 py-4 whitespace-nowrap">
                       {eachEntry.farmerusername}
                     </td>
                   )}
 
-                  {pathName === "adminHome/viewfarmer" && (
+                  {pathName === "/adminHome/viewfarmer" && (
                     <td className="px-6 py-4 whitespace-nowrap">
                       {eachEntry.farmer_land}
                     </td>
@@ -119,11 +119,11 @@ export default function DataTable({ data, pathName }) {
                     <button
                       onClick={deleteDataHandle}
                       value={
-                        (pathName === "adminHome/viewtransporter" &&
+                        (pathName === "/adminHome/viewtransporter" &&
                           eachEntry.transporter_email) ||
-                        (pathName === "adminHome/viewharvesterdata" &&
+                        (pathName === "/adminHome/viewharvesterdata" &&
                           eachEntry.harvester_email) ||
-                        (pathName === "adminHome/viewfarmer" && eachEntry.farmeremail)
+                        (pathName === "/adminHome/viewfarmer" && eachEntry.farmeremail)
                       }
                       class="flex items-center px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 focus:outline-none focus:ring focus:ring-red-300"
                     >

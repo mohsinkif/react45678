@@ -7,7 +7,7 @@ export default function ViewFarmerData() {
     const location = useLocation();
     const path = location.pathname;
     const segments = path.split('/');
-    const pathName = segments[1]; 
+    const pathName = segments[2]; 
     const data = useActionData();
     const submit = useSubmit();
     let arrayOfFarmerData = [data];
