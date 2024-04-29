@@ -20,7 +20,8 @@ import ViewHarvesterData, {
 import ViewTransporterData, {
   viewTransporterDataAction,
 } from "./Pages/ViewTransporterData";
-import Transporter from "./Pages/Transporter";
+import Transporter from "./Pages/Transporter";  
+import ViewFeedBack, {loadFeedBack, feedBackAction} from "./Pages/ViewFeedBack";
 
 function App() {
   const router = createBrowserRouter([
@@ -88,6 +89,12 @@ function App() {
               element: <ViewFarmerData />,
               action: viewFarmerDataAction,
             },
+            {
+              path:'viewfeedback',
+              element:<ViewFeedBack/>,
+              load:loadFeedBack,
+              action:feedBackAction,
+            }
           ],
         },
         {
