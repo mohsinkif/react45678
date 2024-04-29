@@ -15,25 +15,25 @@ import { TiLeaf } from "react-icons/ti";
 const navLinks = [
   {
     title: "Home",
-    path: "/home",
+    path: "/userhome",
   },
 
   {
     title: "About",
-    path: "/home/about",
+    path: "/userhome/about",
   },
   {
     title: "Contact",
-    path: "/home/contact",
+    path: "/userhome/contact",
   },
   {
     title: "Harvester",
-    path: "/home/harvester",
+    path: "/userhome/harvester",
   },
 
   {
     title: "Transporter",
-    path: "/home/transporter",
+    path: "/userhome/transporter",
   },
 ];
 
