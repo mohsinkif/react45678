@@ -47,7 +47,7 @@ export default function ViewHarvesterData() {
             <div className={classes.vhdTableHolder}>
 {/**                <DataTable data={[]}/>
  */}
-                {data ? <DataTable data={data} pathName={pathName}/>: <p className="text-green-600">There are no Values To Show</p>}
+                {data ? <DataTable data={data} pathName={`adminHome/${pathName}` }/>: <p className="text-green-600">There are no Values To Show</p>}
             </div>
 
         </div>
