@@ -1,72 +1,55 @@
 import { useEffect, useState } from "react";
 import Navbar from "../Components/Navbar";
 import Team from "../Components/Team";
-
+import { IoBookOutline } from "react-icons/io5";
+import { TiPencil } from "react-icons/ti";
+import Footer from "../Components/Footer";
+import IndividualIntervalsExample from '../Components/Carousel'
 export default function About({ slides }) {
   return (
     <>
     <Navbar/>
     <>
-      <div className="grid grid-cols-1 lg:grid-cols-3 my-20 px-4">
-        <div className="lg:col-span-2">
-          <p className="text-2xl font-bold font-serif ">
-            <div className="my-5">
-              <h3 className="text-4xl">
-                {" "}
-                <span className="text-green-700 ">I</span>NTRO{" "}
-              </h3>
-              <div className="my-4">
-                <div data-aos="zoom-in-left">
-                  Welcome to Agr i Drone, where innovation meets agriculture to
-                  revolutionize farming practices for a sustainable future.
+      <div className='about-us w-[90%] mx-auto'>
+            <div className="title text-4xl font-bold text-center py-8">Our Story</div>
+            <div className="content py-8">
+                <div className="who-we-are">
+                    <div className="title">
+                        <h1 className='text-center text-2xl font-semibold'>Who We Are</h1>
+                        <p className='pt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae culpa dicta non, repudiandae nihil exercitationem placeat, architecto veniam magnam voluptas excepturi qui. Aliquid magnam, delectus non debitis ut hic quidem rem voluptatibus consequatur, accusantium reiciendis nostrum iure numquam provident repudiandae deserunt deleniti. Nihil, modi necessitatibus. Necessitatibus tempore quas hic aliquid voluptate, eveniet alias aspernatur? Dicta ex cupiditate, aliquam, totam iste doloremque tempora quaerat sapiente debitis facere animi ipsum illo, a omnis qui similique officia obcaecati accusamus cum ea soluta voluptatem est. Molestiae dicta laboriosam, dolor quae deserunt quis id expedita fuga sunt accusamus. Illo placeat natus earum suscipit ipsum beatae.</p>
+                    </div>
+                    <div className="horizontal-line-with-icon py-8">
+                        <IoBookOutline size={40} color='#6DCDE2' className='mx-2' />
+                    </div>
                 </div>
-              </div>
-            </div>
-
-            <div className="my-5">
-              <h3 className="text-4xl">
-                {" "}
-                <span className="text-green-700 ">O</span>UR{" "}
-                <span className="text-green-700">M</span>ISSION
-              </h3>
-              <div className="my-4">
-                <div data-aos="zoom-in-left">
-                  At Agri Drone, our mission is clear: to harness the power of
-                  cutting-edge drone technology to empower farmers, enhance
-                  agricultural efficiency, and promote environmental
-                  stewardship. We believe in the transformative potential of
-                  drones to revolutionize traditional farming methods, paving
-                  the way for smarter, more sustainable agricultural practices.
+                <div className="who-we-are">
+                    <div className="title">
+                        <h1 className='text-center text-2xl font-semibold'>What We Do</h1>
+                        <p className='pt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae culpa dicta non, repudiandae nihil exercitationem placeat, architecto veniam magnam voluptas excepturi qui. Aliquid magnam, delectus non debitis ut hic quidem rem voluptatibus consequatur, accusantium reiciendis nostrum iure numquam provident repudiandae deserunt deleniti. Nihil, modi necessitatibus. Necessitatibus tempore quas hic aliquid voluptate, eveniet alias aspernatur? Dicta ex cupiditate, aliquam, totam iste doloremque tempora quaerat sapiente debitis facere animi ipsum illo, a omnis qui similique officia obcaecati accusamus cum ea soluta voluptatem est. Molestiae dicta laboriosam, dolor quae deserunt quis id expedita fuga sunt accusamus. Illo placeat natus earum suscipit ipsum beatae.</p>
+                    </div>
+                    <div className="horizontal-line-with-icon py-8">
+                        <TiPencil size={40} color='#6DCDE2' className='mx-2' />
+                    </div>
                 </div>
-              </div>
-            </div>
-
-            <div className="my-5">
-              <h3 className="text-4xl">
-                {" "}
-                <span className="text-green-700 ">O</span>UR{" "}
-                <span className="text-green-700">M</span>OTIVE
-              </h3>
-              <div className="my-3">
-                <div data-aos="zoom-in-left">
-                  At Agri Drone, we envision a future where technology and
-                  agriculture converge to create a more resilient and equitable
-                  food system. By democratizing access to drone technology and
-                  knowledge, we empower farmers of all scales to thrive in an
-                  increasingly complex and interconnected world. Join us on our
-                  journey to reimagine agriculture for the 21st century.
-                  Together, we can cultivate a more sustainable future for
-                  generations to come.
+                <div className="who-we-are">
+                    <div className="title">
+                        <h1 className='text-center text-2xl font-semibold'>Where We Do It</h1>
+                        <p className='pt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae culpa dicta non, repudiandae nihil exercitationem placeat, architecto veniam magnam voluptas excepturi qui. Aliquid magnam, delectus non debitis ut hic quidem rem voluptatibus consequatur, accusantium reiciendis nostrum iure numquam provident repudiandae deserunt deleniti. Nihil, modi necessitatibus. Necessitatibus tempore quas hic aliquid voluptate, eveniet alias aspernatur? Dicta ex cupiditate, aliquam, totam iste doloremque tempora quaerat sapiente debitis facere animi ipsum illo, a omnis qui similique officia obcaecati accusamus cum ea soluta voluptatem est. Molestiae dicta laboriosam, dolor quae deserunt quis id expedita fuga sunt accusamus. Illo placeat natus earum suscipit ipsum beatae.</p>
+                    </div>
+                    <div className="horizontal-line-with-icon py-8">
+                        <IoBookOutline size={40} color='#6DCDE2' className='mx-2' />
+                    </div>
                 </div>
-              </div>
             </div>
-          </p>
         </div>
-
-        <div></div>
-      </div>
     </>
+    <h1 className='title text-4xl font-bold text-center py-8'>Our Motive</h1>
+    <div className="title text-4xl font-bold text-center py-8" style={{color:"grey"}}>“Working in Partnership is crucial for us to deliver our clients with <br></br> sustainable commitments”</div>
+    <div className="title text-4xl font-bold text-center py-8">Team</div>
       <Team />
+      <br/><br/><br/>
+      <IndividualIntervalsExample/>
+      <Footer/>
     </>
   );
 }

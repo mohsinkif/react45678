@@ -3,14 +3,13 @@ import Box from "@mui/material/Box";
 import { DataGrid } from "@mui/x-data-grid";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-import IndividualIntervalsExample from '../Components/Carousel'
-import PieChart from "../Components/PirChart";
+import RateUs from "../Components/RateUs";
 
 const columns = [
   { field: "id", headerName: "ID", width: 100 },
-  { field: "harvester_name", headerName: "Name", width: 200 },
-  { field: "harvester_phone", headerName: "Phone", width: 200 },
-  { field: "harvester_email", headerName: "Email", width: 300 },
+  { field: "transporter_name", headerName: "Name", width: 200 },
+  { field: "transporter_phone", headerName: "Phone", width: 200 },
+  { field: "transporter_email", headerName: "Email", width: 300 },
 ];
 
 export default function Table() {
@@ -25,7 +24,7 @@ export default function Table() {
           return;
         }
 
-        const response = await fetch("http://127.0.0.1:8001/get_harvesters", {
+        const response = await fetch("http://127.0.0.1:8001/get_transporter", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -52,7 +51,7 @@ export default function Table() {
   return (
     <>
       <Navbar />
-      <div className="title text-4xl font-bold text-center py-8">NEARBY HARVESTER</div>
+      
       <Box
         sx={{
           height: "auto",
@@ -85,7 +84,7 @@ export default function Table() {
           }}
         />
       </Box>
-      <PieChart/>
+      <RateUs/>
       <Footer style={{ position: "absolute", bottom: 0 }} />
     </>
   );

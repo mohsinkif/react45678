@@ -14,6 +14,7 @@ import AddTransporter, {addTransporterAction} from "./Pages/AddTransporter";
 import ViewFarmerData,{viewFarmerDataAction} from "./Pages/ViewFarmerData";
 import ViewHarvesterData, {viewHarvesterDataAction} from "./Pages/ViewHarvesterData";
 import ViewTransporterData,{viewTransporterDataAction} from "./Pages/ViewTransporterData";
+import Transporter from './Pages/Transporter'
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         {path:'/contact',element:<Contact/>},
         {path:'/harvester',element:<Harvester/>},
         {path:'/adminHome',element:<AdminHome/>},
+        {path: '/transporter',element:<Transporter/>},
         {path:'/registerfarmer', element:<RegisterFarmer/>,action:farmerRegistrationAction},
         {path:'/addharvester', element:<AddHarvester/>,action:addHarvesterAction},
         {path:"/addtransporter",element:<AddTransporter/>,action:addTransporterAction},

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { redirect, useActionData, useLoaderData } from 'react-router-dom'
 import Navbar from '../Components/Navbar'
 import Map from '../Components/Map'
-
+import Footer from '../Components/Footer';
 export default function Home() {
 
   
@@ -10,7 +10,9 @@ export default function Home() {
   return (
     <div>
       <Navbar/>
-      
+      <Map/>
+      {/* <PieChart/> */}
+      <Footer/>
     </div>
   )
 }

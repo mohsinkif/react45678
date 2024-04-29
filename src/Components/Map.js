@@ -5,20 +5,42 @@ import { MapContainer, TileLayer, SVGOverlay, Marker, Popup,useMap } from 'react
 import { useQuery } from "react-query";
 import axios from 'axios'
 import "leaflet.heat"
-const position = [51.505, -0.09]
+const position = [30.505, 71.09]
 const bounds = [
   [51.49, -0.08],
   [51.5, -0.06],
 ]
-
+async function Fetchdata(){
+  const data = await axios.get('http://127.0.0.1:8001/fetch_coordinates')
+  return data
+}
 
 const Map = () => {
-    return <MapContainer center={position} zoom={13} scrollWheelZoom={true} style={{width:'200%',height:'85vh', marginTop:'12vh'}}>
-    <HeatMap/>
+  const { data, isSuccess } = useQuery("mydata", Fetchdata);
+  
+  // Check if data is available and isSuccess is true
+  if (!isSuccess) {
+    return <div>Loading...</div>;
+  }
+   const markerData = data?.data || [];
+    return <MapContainer center={position} zoom={13} scrollWheelZoom={true} style={{width:'200%',height:'85vh', marginTop:'10vh'}}>
+    {/* <HeatMap/> */}
     <TileLayer
       attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     />
+    {markerData.map((pos, index) => {
+          const markerIcon = pos.predictionvalue === 1 ? "blue.png" : "red.png";
+          return (
+            <Marker
+              key={index}
+              position={[pos.latitude, pos.longitude]}
+              icon={L.icon({ iconUrl: markerIcon, iconSize: [10, 10] })}
+            >
+              <Popup>This is marker {index}</Popup>
+            </Marker>
+          );
+        })}
     <SVGOverlay attributes={{ stroke: 'red' }} bounds={bounds}>
       <circle r="35" cx="30" cy="30" fill="blue" />
       <text x="50%" y="50%" stroke="black">
@@ -29,26 +51,4 @@ const Map = () => {
 };
 
 export default Map;
-async function Fetchdata(){
-  const data = await axios.get('http://127.0.0.1:8001/fetch_coordinates')
-  return data
-}
-function HeatMap() {
-  const { data, isSuccess } = useQuery("mydata", Fetchdata);
-  const map = useMap();
-  console.log(data && data.data)
-  // Check if the query was successful and data is available
-  if (!isSuccess) {
-    // You can render an error message or return early
-    return <div>Error loading data</div>;
-  }
-  // Assuming data.data is an array with [latitude, longitude] pairs
-  const addressPoints = data.data.map(function (p) {
-    return [p.latitude, p.longitude,p.opacity];
-  });
 
-  var heat = L.heatLayer(addressPoints, { radius: 50 }).addTo(map);
-
-  // You may want to return null or some other UI if the heatmap is rendered asynchronously
-  return null;
-}
