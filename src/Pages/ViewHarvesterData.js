@@ -23,7 +23,7 @@ export default function ViewHarvesterData() {
 
     const searchHarvesterHanle = (event) => {
         event.preventDefault();
-        submit({city:formData.city}, {method:'post',action: `adminHome/${pathName}` ,encType:'application/json'})
+        submit({city:formData.city}, {method:'post',action:`${pathName}` ,encType:'application/json'})
     }
 
   return (
@@ -47,7 +47,7 @@ export default function ViewHarvesterData() {
             <div className={classes.vhdTableHolder}>
 {/**                <DataTable data={[]}/>
  */}
-                {data ? <DataTable data={data} pathName={`/adminHome/${pathName}` }/>: <p className="text-green-600">There are no Values To Show</p>}
+                {data ? <DataTable data={data} pathName={`${pathName}` }/>: <p className="text-green-600">There are no Values To Show</p>}
             </div>
 
         </div>
