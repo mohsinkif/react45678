@@ -65,7 +65,7 @@ export const loginAction = async ({ request, params }) => {
 
   }
 
-  return redirect('/home')
+  return redirect('/userhome')
 
 
   
