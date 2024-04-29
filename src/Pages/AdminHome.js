@@ -54,7 +54,7 @@ export default function AdminHome() {
 }
 
 export const adminAuthLoader = () => {
-  const cookieExists = document.cookie.split(';').some(cookie => cookie.trim().startsWith('adminToken='));
+  const cookieExists = document.cookie.split(';').some(cookie => cookie.trim().startsWith('adminToken'+'='));
   if(cookieExists){
     return null
   }
