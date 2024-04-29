@@ -20,20 +20,20 @@ const navLinks = [
 
   {
     title: "About",
-    path: "/about",
+    path: "about",
   },
   {
     title: "Contact",
-    path: "/contact",
+    path: "contact",
   },
   {
     title: "Harvester",
-    path: "/harvester",
+    path: "harvester",
   },
 
   {
     title: "Transporter",
-    path: "/transporter",
+    path: "transporter",
   },
 ];
 
