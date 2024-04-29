@@ -23,7 +23,7 @@ export default function AuthenticationForm() {
     const loginHandler = (event) => {
         event.preventDefault(); 
         submit({email:formData.email, password:formData.password},
-          {method:'post',action: `/${pathName}` ,encType: "application/json",})
+          {method:'post',action:`/${pathName}` ,encType: "application/json",})
     }
 
     return (
