@@ -17,7 +17,7 @@ export default function AdminNavbar() {
   const logOutHandler = () => {
     setLoogedIn(false);
     document.cookie =
-      "token" + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      "adminToken" + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
   };
   return (
     <div>
