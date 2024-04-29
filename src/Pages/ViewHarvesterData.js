@@ -23,7 +23,7 @@ export default function ViewHarvesterData() {
 
     const searchHarvesterHanle = (event) => {
         event.preventDefault();
-        submit({city:formData.city}, {method:'post',action:`${pathName}` ,encType:'application/json'})
+        submit({city:formData.city}, {method:'post',action:`/adminHome/${pathName}` ,encType:'application/json'})
     }
 
   return (
