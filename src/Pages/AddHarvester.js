@@ -24,7 +24,7 @@ export default function AddHarvester() {
     const submitData = (event) =>{
         event.preventDefault(); 
         submit(formData,
-          {method:'post',action: "/addharvester" ,encType: "application/json",})
+          {method:'post',action: "/adminHome/addharvester" ,encType: "application/json",})
     }
     
   return (

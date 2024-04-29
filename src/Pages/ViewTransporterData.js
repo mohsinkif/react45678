@@ -24,7 +24,7 @@ export default function ViewTransporterData() {
     const searchHarvesterHanle = (event) => {
         event.preventDefault();
         console.log(formData.tcity)
-        submit({tcity:formData.tcity}, {method:'post',action: `/${pathName}` ,encType:'application/json'})
+        submit({tcity:formData.tcity}, {method:'post',action: `adminHome/${pathName}` ,encType:'application/json'})
     }
 
   return (

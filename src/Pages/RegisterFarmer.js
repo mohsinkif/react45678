@@ -33,7 +33,7 @@ export default function RegisterFarmer() {
     const submitData = (event) =>{
         event.preventDefault(); 
         submit(formData,
-          {method:'post',action: "/registerfarmer" ,encType: "application/json",})
+          {method:'post',action: "/adminHome/registerfarmer" ,encType: "application/json",})
     }
     
   return (

@@ -25,7 +25,7 @@ export default function AddTransporter() {
     const submitData = (event) =>{
         event.preventDefault(); 
         submit(formData,
-          {method:'post',action: "/addtransporter" ,encType: "application/json",})
+          {method:'post',action: "/adminHome/addtransporter" ,encType: "application/json",})
     }
     
   return (
