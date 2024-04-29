@@ -41,12 +41,12 @@ function App() {
         },
         
         {
-          path: "/adminLogin",              
+          path: "/adminLogin",    
+          action: adminLoginAction,          
            children:[
             {
               index:true,
               element: <AdminLogin />,
-              action: adminLoginAction,
             }
           ]
         },
