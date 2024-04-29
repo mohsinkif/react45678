@@ -95,7 +95,7 @@ export default function DataTable({ data, pathName }) {
                       eachEntry.transporter_email) ||
                       (pathName === "viewharvesterdata" &&
                         eachEntry.harvester_email) ||
-                      (pathName === "/adminHome/viewfarmer" && eachEntry.farmeremail)}
+                      (pathName === "viewfarmer" && eachEntry.farmeremail)}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     {(pathName === "viewtransporter" &&
@@ -111,7 +111,7 @@ export default function DataTable({ data, pathName }) {
                     </td>
                   )}
 
-                  {pathName === "/adminHome/viewfarmer" && (
+                  {pathName === "viewfarmer" && (
                     <td className="px-6 py-4 whitespace-nowrap">
                       {eachEntry.farmer_land}
                     </td>
