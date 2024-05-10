@@ -3,7 +3,7 @@ import AdminNavbar from "../Components/AdminNavbar";
 import classes from "../CSS/adminPages.module.css";
 import { json, useSubmit } from "react-router-dom";
 import { useActionData } from "react-router-dom";
-
+import Footer from "../Components/Footer";
 export default function RegisterFarmer() {
     
     const data = useActionData();
@@ -200,6 +200,8 @@ export default function RegisterFarmer() {
 
         </form>
       </div>
+      <br/>
+      <Footer/>
     </div>
   );
 }

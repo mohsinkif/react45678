@@ -3,7 +3,7 @@ import AdminNavbar from "../Components/AdminNavbar";
 import classes from "../CSS/adminPages.module.css";
 import { json, useSubmit } from "react-router-dom";
 import { useActionData } from "react-router-dom";
-
+import Footer from "../Components/Footer";
 export default function AddHarvester() {
     const data = useActionData();
     const submit = useSubmit();
@@ -134,6 +134,7 @@ export default function AddHarvester() {
           </div>
         </form>
       </div>
+      <Footer/>
     </div>
   );
 }

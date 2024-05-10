@@ -5,7 +5,7 @@ import { MapContainer, TileLayer, SVGOverlay, Marker, Popup,useMap } from 'react
 import { useQuery } from "react-query";
 import axios from 'axios'
 import "leaflet.heat"
-const position = [30.505, 71.09]
+const position = [30.14708571250206, 71.44907853283596]
 const bounds = [
   [51.49, -0.08],
   [51.5, -0.06],
@@ -23,7 +23,7 @@ const Map = () => {
     return <div>Loading...</div>;
   }
    const markerData = data?.data || [];
-    return <MapContainer center={position} zoom={13} scrollWheelZoom={true} style={{width:'200%',height:'85vh', marginTop:'10vh'}}>
+    return <MapContainer center={position} zoom={17} scrollWheelZoom={true} style={{width:'200%',height:'85vh', marginTop:'10vh'}}>
     {/* <HeatMap/> */}
     <TileLayer
       attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

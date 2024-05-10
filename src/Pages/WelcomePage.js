@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import { Link, redirect } from 'react-router-dom'
+import homescreen from '../Assets/homescreen.jpg'
 
 
 export default function WelcomePage() {
@@ -7,6 +8,7 @@ export default function WelcomePage() {
  
 
   return (
+    <div style={{backgroundImage: `url(${homescreen})`, backgroundSize:'cover', backgroundPosition:'center',minHeight:'100vh',display:'flex', justifyContent:'center',alignItems:'center'}}>
     <div>
       <div className='flex justify-center space-x-20 items-center my-40' >
       <Link to='/userLogin'>
@@ -15,6 +17,7 @@ export default function WelcomePage() {
       <Link to="/adminLogin">
         <button className='rounded px-12 font-bold text-2xl py-5 hover:bg-green-400 bg-green-600 text-white'  >Admin</button>
       </Link>
+      </div>
       </div>
     </div>
   )

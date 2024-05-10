@@ -1,48 +1,35 @@
-import React from 'react'
+import React from 'react';
 import { CiPhone } from "react-icons/ci";
 import { CiLocationOn } from "react-icons/ci";
-import { FaLinkedin } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
-import { FaFacebookSquare } from "react-icons/fa";
-import { FaInstagramSquare } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <>
-        <div id='contact' className=' bg-black '>
-        <div className='grid grid-cols-2 lg:px-28'>
-        <div className='text-white grid-col-1 py-3'>
-    <span style={{ verticalAlign: 'middle', display: 'inline-flex', alignItems: 'center' }}>
-        <CiLocationOn size={30} color='green' /> 
-        <span style={{ marginLeft: '10px' }}>Street line 1, Islamabad </span> 
-    </span>
-
-<div className='my-3'>
-
-    <span style={{ verticalAlign: 'middle', display: 'inline-flex', alignItems: 'center' }}>
-        <CiPhone size={30} color='green'/> 
-        <span style={{ marginLeft: '10px' }}>9450435043 </span> 
-    </span>
-    </div>
-    <div>
-
-<span style={{ verticalAlign: 'middle', display: 'inline-flex', alignItems: 'center' }}>
-    <MdOutlineMail size={30} color='green'/> 
-    <span style={{ marginLeft: '10px' }}>abc@gmail.com </span> 
-</span>
-</div>
-
-</div>
-
-    <div className='text-white grid-col-1 py-3'>
-        <h3 className='text-green-700 text-2xl'>About Company</h3>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid maxime dolorem id. Ratione vero eos nostrum blanditiis dolores id consequatur aliquam error assumenda repudiandae. 
-    </div>
+    <div style={{ backgroundColor: '#000', color: '#fff', padding: '20px 0', bottom: 0, left: 0, width: '100%' }}>
+      <div id='contact' className='container mx-auto px-4 lg:px-28'>
+        <div className='grid grid-cols-2 gap-4'>
+          <div className='py-3'>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <CiLocationOn size={30} color='green' />
+              <span style={{ marginLeft: '10px' }}>BLUE AREA,ISLAMABAD </span>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', marginTop: '10px' }}>
+              <CiPhone size={30} color='green' />
+              <span style={{ marginLeft: '10px' }}>+9450435043 </span>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', marginTop: '10px' }}>
+              <MdOutlineMail size={30} color='green' />
+              <span style={{ marginLeft: '10px' }}>servies@agridrone.com </span>
+            </div>
+          </div>
+          <div className='py-3'>
+            <h3 className='text-green-700 text-2xl'>About Company</h3>
+            <p>With a team of passionate experts in agriculture, data science, and drone technology, we leverage cutting-edge aerial imagery and machine learning algorithms to provide actionable intelligence for crop monitoring and decision-making.</p>
+          </div>
         </div>
+      </div>
     </div>
-
-    </>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

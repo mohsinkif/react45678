@@ -1,11 +1,10 @@
 import React from 'react'
 import AuthenticationForm from '../Components/AuthenticationForm';
 import { redirect, json } from 'react-router-dom';
-
+import homescreen from '../Assets/homescreen.jpg';
 export default function AdminLogin() {
   return (
     <AuthenticationForm/>
-
   )
 }
 

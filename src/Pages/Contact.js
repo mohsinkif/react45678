@@ -50,32 +50,32 @@ const Contact = () => {
                                 <MdLocationPin size={40} fill='white' />
                             </div>
                             <div className="title uppercase font-bold">address</div>
+                            <h3 className='text-md font-semibold'>AgriDrone Contracting</h3>
+                            <p>146 young street <br /> Denver CO Karachi</p>
                             <h3 className='text-md font-semibold'>Welfield Group Contracting</h3>
-                            <p>146 young street <br /> Denver CO 80223</p>
-                            <h3 className='text-md font-semibold'>Welfield Group Contracting</h3>
-                            <p>146 young street <br /> Denver CO 80223</p>
+                            <p>190 street <br /> Denver CO Lahore</p>
                         </div>
                         <div className="phone flex flex-col gap-1 justify-center items-center text-center">
                             <div className="icon p-2 w-max bg-gray-400 rounded-full">
                                 <PiPhoneCallFill size={40} fill='white' />
                             </div>
                             <div className="title uppercase font-bold">phone</div>
+                            <h3 className='text-md font-semibold'>AgriDrone Contracting</h3>
+                            <p>Karachi, Pakistan <br /> +929006658741</p>
                             <h3 className='text-md font-semibold'>Welfield Group Contracting</h3>
-                            <p>146 young street <br /> Denver CO 80223</p>
-                            <h3 className='text-md font-semibold'>Welfield Group Contracting</h3>
-                            <p>146 young street <br /> Denver CO 80223</p>
+                            <p>Lahore, Pakistan <br /> +925001478526</p>
                             <h3 className='text-md font-semibold'>Employement Opportunities</h3>
-                            <p>146 young street <br />careers@welfieldcontracting.com</p>
+                            <p>New York, USA <br />+966255896321</p>
                         </div>
                         <div className="email flex flex-col gap-1 justify-center items-center text-center">
                             <div className="icon p-2 w-max bg-gray-400 rounded-full">
                                 <PiChatDotsFill size={40} fill='white' />
                             </div>
                             <div className="title uppercase font-bold">email</div>
-                            <h3 className='text-md font-semibold'>Welfield Group Contracting</h3>
-                            <p>146 young street <br /> Denver CO 80223</p>
+                            <h3 className='text-md font-semibold'>AgriDrone Contracting</h3>
+                            <p>Agri.Drone45@gmail.com<br /> AgriDrone966@gmail.com</p>
                             <h3 className='text-md font-semibold'>Employement Opportunities</h3>
-                            <p>146 young street <br />careers@welfieldcontracting.com</p>
+                            <p>eopportunity@gmail.com <br />Careers@gmail.com</p>
                         </div>
                     </div>
                 </div>
@@ -83,7 +83,9 @@ const Contact = () => {
                 <div className="message-us flex flex-col md:flex-row justify-center gap-4 w-[90%] mx-auto">
                     <div className="title py-8 w-[100%] md:w-1/2">
                         <h1 className='text-blue-800 font-bold text-4xl pb-2 text-center md:text-start'>Message Us</h1>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ab quam, unde placeat, nam laboriosam, ut ipsam iusto molestias numquam provident ipsum veniam. Nemo odio rerum atque at repudiandae dicta corporis minima similique necessitatibus neque, facere, minus reiciendis doloribus doloremque dolore delectus maiores eum accusamus optio quas tempora debitis dolor voluptas? Inventore veritatis qui rerum omnis dolorem a aspernatur, at quia non aliquid dignissimos nostrum quasi cupiditate eaque animi ullam repellat? Laudantium quos natus ducimus nobis, deleniti, reiciendis nostrum odit, aliquid vel consequatur explicabo inventore. Deleniti harum fugiat officia ullam, consequatur, amet rem nobis vel officiis, dignissimos magni itaque eum.</p>
+                        <p>At AgriDrone, we prioritize customer satisfaction and are dedicated to providing the best possible support to our users. Whether you have inquiries about our services, suggestions for improvement, or just want to share your experiences, our team is here to assist you.
+
+Your input enables us to continually refine our technology and offerings, making AgriDrone a more effective and user-friendly platform for farmers and agricultural stakeholders worldwide. Thank you for being a part of our community, and we look forward to hearing from you!</p>
                     </div>
                     <div className="flex justify-center items-center w-[100%] md:w-1/2 bg-white">
       <form onSubmit={handleSubmit} className="container mx-auto my-4 px-4 lg:px-20">

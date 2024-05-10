@@ -2,6 +2,7 @@ import { Link, redirect, useNavigate } from "react-router-dom";
 import classes from "../CSS/adminhome.module.css";
 import React from "react";
 import AdminNavbar from "../Components/AdminNavbar";
+import Footer from "../Components/Footer";
 
 export default function AdminHome() {
   return (

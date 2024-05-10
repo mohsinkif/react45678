@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Pie } from 'react-chartjs-2';
 import Chart from 'chart.js/auto'; // Import Chart object from Chart.js library
-
+import FetchCropName from './FetchCropName';
 const PieChart = () => {
   const [pieChartData, setPieChartData] = useState(null);
   const [loading, setLoading] = useState(true);
-
+  const token= getTokenFromStorage();
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -24,7 +24,7 @@ const PieChart = () => {
 
   return (
     <div style={{ width: '50%', margin: 'auto' }}>
-      <h2>Pie Chart</h2>
+      <h2><FetchCropName token={token}/></h2>
       {loading ? (
         <p>Loading...</p>
       ) : pieChartData ? (
@@ -50,3 +50,13 @@ const PieChart = () => {
 };
 
 export default PieChart;
+function getTokenFromStorage() {
+  const cookies = document.cookie.split("; ");
+  for (const cookie of cookies) {
+    const [name, value] = cookie.split("=");
+    if (name === "token") {
+      return value;
+    }
+  }
+  return null;
+}

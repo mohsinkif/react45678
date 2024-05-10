@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import classes from "../CSS/adminPages.module.css";
 import { useActionData, useSubmit,useLocation, json } from 'react-router-dom';
 import DataTable from '../Components/DataTable';
+import AdminNavbar from '../Components/AdminNavbar';
 
 export default function ViewFarmerData() {
     const location = useLocation();
@@ -26,6 +27,8 @@ export default function ViewFarmerData() {
     }
 
   return (
+    <div>
+    <AdminNavbar/>
     <div className={classes.vhdContainer}>
         <div className={classes.vhdontentHolder}>
             <div className={classes.vhdFormHolder}>
@@ -50,6 +53,7 @@ export default function ViewFarmerData() {
             </div>
 
         </div>
+    </div>
     </div>
   )
 }

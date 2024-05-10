@@ -2,7 +2,8 @@ import React, {useState} from 'react'
 import classes from "../CSS/adminPages.module.css";
 import { useActionData, useSubmit,useLocation, json } from 'react-router-dom';
 import DataTable from '../Components/DataTable';
-
+import Footer from '../Components/Footer';
+import AdminNavbar from '../Components/AdminNavbar';
 export default function ViewHarvesterData() {
     const location = useLocation();
     const path = location.pathname;
@@ -27,6 +28,8 @@ export default function ViewHarvesterData() {
     }
 
   return (
+    <div>
+    <AdminNavbar/>
     <div className={classes.vhdContainer}>
         <div className={classes.vhdontentHolder}>
             <div className={classes.vhdFormHolder}>
@@ -51,7 +54,11 @@ export default function ViewHarvesterData() {
             </div>
 
         </div>
+        
     </div>
+    </div>
+
+    
   )
 }
 

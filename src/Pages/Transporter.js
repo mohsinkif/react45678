@@ -4,6 +4,7 @@ import { DataGrid } from "@mui/x-data-grid";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import RateUs from "../Components/RateUs";
+import IndividualIntervalsExample from "../Components/Carousel";
 
 const columns = [
   { field: "id", headerName: "ID", width: 100 },
@@ -51,7 +52,7 @@ export default function Table() {
   return (
     <>
       <Navbar />
-      
+      <div className="title text-4xl font-bold text-center py-8">NEARBY TRANSPORTER</div>
       <Box
         sx={{
           height: "auto",
@@ -84,7 +85,8 @@ export default function Table() {
           }}
         />
       </Box>
-      <RateUs/>
+      <div className="title text-4xl font-bold text-center py-8" style={{}}>MORE ABOUT US</div>
+      <IndividualIntervalsExample/>
       <Footer style={{ position: "absolute", bottom: 0 }} />
     </>
   );
