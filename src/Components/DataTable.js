@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "../CSS/adminPages.module.css";
-
+import { backendurl } from "../constant";
 export default function DataTable({ data, pathName }) {
   const endpoint =
     (pathName === "viewtransporter" && "deletetransporter") ||
@@ -18,7 +18,7 @@ export default function DataTable({ data, pathName }) {
         harvester_email: event.target.value,
       }) ||
       (pathName === "viewfarmer" && { farmeremail: event.target.value });
-    fetch(`http://127.0.0.1:8001/${endpoint}`, {
+    fetch(`${backendurl}/${endpoint}`, {
       method: "delete",
       headers: {
         "Content-Type": "application/json",

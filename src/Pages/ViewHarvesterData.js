@@ -4,6 +4,7 @@ import { useActionData, useSubmit,useLocation, json } from 'react-router-dom';
 import DataTable from '../Components/DataTable';
 import Footer from '../Components/Footer';
 import AdminNavbar from '../Components/AdminNavbar';
+import { backendurl } from '../constant';
 export default function ViewHarvesterData() {
     const location = useLocation();
     const path = location.pathname;
@@ -64,9 +65,9 @@ export default function ViewHarvesterData() {
 
 
 export const viewHarvesterDataAction = async ({request,params}) => {
-
+// (`${backendurl}/get_transporter`
     const formData = await request.json();
-    const sendViewRequest = await fetch('http://127.0.0.1:8001/viewharvester', {
+    const sendViewRequest = await fetch(`${backendurl}/viewharvester`, {
     method: request.method,
     // mode: 'no-cors',
     headers: {

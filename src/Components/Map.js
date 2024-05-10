@@ -5,13 +5,14 @@ import { MapContainer, TileLayer, SVGOverlay, Marker, Popup,useMap } from 'react
 import { useQuery } from "react-query";
 import axios from 'axios'
 import "leaflet.heat"
+import { backendurl } from "../constant";
 const position = [30.14708571250206, 71.44907853283596]
 const bounds = [
   [51.49, -0.08],
   [51.5, -0.06],
 ]
 async function Fetchdata(){
-  const data = await axios.get('http://127.0.0.1:8001/fetch_coordinates')
+  const data = await axios.get(`${backendurl}/fetch_coordinates`)
   return data
 }
 

@@ -4,6 +4,7 @@ import classes from "../CSS/adminPages.module.css";
 import { json, useSubmit } from "react-router-dom";
 import { useActionData } from "react-router-dom";
 import Footer from "../Components/Footer";
+import { backendurl } from "../constant";
 export default function AddHarvester() {
     const data = useActionData();
     const submit = useSubmit();
@@ -141,8 +142,9 @@ export default function AddHarvester() {
 
 export const addHarvesterAction = async ({request,params}) => {
     const formData = await request.json();
-    const sendDataRequest = await fetch('http://127.0.0.1:8001/add_harvester', {
+    const sendDataRequest = await fetch(`${backendurl}/add_harvester`, {
     method: request.method,
+    // (`${backendurl}/get_transporter`
     // mode: 'no-cors',
     headers: {
       "Content-Type": "application/json",

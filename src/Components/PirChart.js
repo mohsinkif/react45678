@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Pie } from 'react-chartjs-2';
 import Chart from 'chart.js/auto'; // Import Chart object from Chart.js library
 import FetchCropName from './FetchCropName';
+import { backendurl } from '../constant';
 const PieChart = () => {
   const [pieChartData, setPieChartData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -10,7 +11,7 @@ const PieChart = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:8001/predictioncount');
+        const response = await axios.get(`${backendurl}/predictioncount`);
         setPieChartData(response.data);
         setLoading(false);
       } catch (error) {

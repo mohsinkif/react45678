@@ -2,6 +2,7 @@ import React from 'react'
 import AuthenticationForm from '../Components/AuthenticationForm';
 import { redirect, json } from 'react-router-dom';
 import homescreen from '../Assets/homescreen.jpg';
+import { backendurl } from '../constant';
 export default function AdminLogin() {
   return (
     <AuthenticationForm/>
@@ -14,8 +15,9 @@ export default function AdminLogin() {
 export const adminLoginAction = async ({ request, params }) => {
   
   const formData = await request.json();
-  const loginRequest = await fetch('http://127.0.0.1:8001/adminlogin', {
+  const loginRequest = await fetch(`${backendurl}/adminlogin`, {
     method: request.method,
+    // (`${backendurl}/get_transporter`
     // mode: 'no-cors',
     headers: {
       "Content-Type": "application/json",

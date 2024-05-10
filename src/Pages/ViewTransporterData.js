@@ -3,7 +3,7 @@ import classes from "../CSS/adminPages.module.css";
 import { useActionData, useSubmit,useLocation, json } from 'react-router-dom';
 import DataTable from '../Components/DataTable';
 import AdminNavbar from '../Components/AdminNavbar';
-
+import { backendurl } from '../constant';
 export default function ViewTransporterData() {
     const location = useLocation();
     const path = location.pathname;
@@ -62,9 +62,9 @@ export default function ViewTransporterData() {
 
 
 export const viewTransporterDataAction = async ({request,params}) => {
-
+// (`${backendurl}/get_transporter`
     const formData = await request.json();
-    const sendViewRequest = await fetch('http://127.0.0.1:8001/viewtransporter', {
+    const sendViewRequest = await fetch(`${backendurl}/viewtransporter`, {
     method: request.method,
     // mode: 'no-cors',
     headers: {

@@ -5,6 +5,7 @@ import { PiChatDotsFill } from "react-icons/pi";
 import Navbar from "../Components/Navbar";
 import Footer from '../Components/Footer';
 import axios from 'axios'
+import { backendurl } from '../constant';
 const Contact = () => {
     const [formData, setFormData] = useState({ message: '' });
     const [submitted, setSubmitted] = useState(false);
@@ -23,10 +24,10 @@ const Contact = () => {
       }
 
       const response = await axios.post(
-        "http://127.0.0.1:8001/submit_message",
+        `${backendurl}/submit_message`,
         { message: formData.message, token }
       );
-
+// (`${backendurl}/get_transporter`
       if (!response.ok) {
         throw new Error(`Failed to submit message: ${response.statusText}`);
       }

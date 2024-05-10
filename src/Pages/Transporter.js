@@ -5,7 +5,7 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import RateUs from "../Components/RateUs";
 import IndividualIntervalsExample from "../Components/Carousel";
-
+import { backendurl } from "../constant";
 const columns = [
   { field: "id", headerName: "ID", width: 100 },
   { field: "transporter_name", headerName: "Name", width: 200 },
@@ -25,7 +25,7 @@ export default function Table() {
           return;
         }
 
-        const response = await fetch("http://127.0.0.1:8001/get_transporter", {
+        const response = await fetch(`${backendurl}/get_transporter`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

@@ -5,6 +5,7 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import IndividualIntervalsExample from '../Components/Carousel'
 import PieChart from "../Components/PirChart";
+import { backendurl } from "../constant";
 
 const columns = [
   { field: "id", headerName: "ID", width: 100 },
@@ -25,7 +26,7 @@ export default function Table() {
           return;
         }
 
-        const response = await fetch("http://127.0.0.1:8001/get_harvesters", {
+        const response = await fetch(`${backendurl}/get_harvesters`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

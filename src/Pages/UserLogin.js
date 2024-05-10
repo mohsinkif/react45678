@@ -1,7 +1,7 @@
 import React from 'react'
 import AuthenticationForm from '../Components/AuthenticationForm';
 import { json, redirect } from 'react-router-dom';
-
+import { backendurl } from '../constant';
 export default function UserLogin() {
 
   
@@ -43,7 +43,8 @@ if (token) {
 export const loginAction = async ({ request, params }) => {
   
   const formData = await request.json();
-  const loginRequest = await fetch('http://127.0.0.1:8001/login', {
+  // (`${backendurl}/get_transporter`
+  const loginRequest = await fetch(`${backendurl}/login`, {
     method: request.method,
     // mode: 'no-cors',
     headers: {

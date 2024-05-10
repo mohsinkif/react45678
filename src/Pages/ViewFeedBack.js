@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import AdminNavbar from '../Components/AdminNavbar';
+import { backendurl } from '../constant';
 const ContactEntries = () => {
   const [contactEntries, setContactEntries] = useState([]);
-
+// (`${backendurl}/get_transporter`
   useEffect(() => {
     const fetchContactEntries = async () => {
       try {
-        const response = await axios.get('http://localhost:8001/contact_entries');
+        const response = await axios.get(`${backendurl}/contact_entries`);
         setContactEntries(response.data.data);
       } catch (error) {
         console.error('Error fetching contact entries:', error);

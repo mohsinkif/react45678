@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import { backendurl } from '../constant';
 const FetchCropName = ({ token }) => {
   const [cropName, setCropName] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -7,7 +7,7 @@ const FetchCropName = ({ token }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:8001/fetch_crop', {
+        const response = await fetch(`${backendurl}/fetch_crop`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
