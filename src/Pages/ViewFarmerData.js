@@ -61,9 +61,9 @@ export default function ViewFarmerData() {
 
 
 export const viewFarmerDataAction = async ({request,params}) => {
-// (`${backendurl}/get_transporter`
+// (`${backendurl}get_transporter`
   const formData = await request.json();
-  const sendViewRequest = await fetch(`${backendurl}/viewfarmer`, {
+  const sendViewRequest = await fetch(`${backendurl}viewfarmer`, {
   method: request.method,
   // mode: 'no-cors',
   headers: {

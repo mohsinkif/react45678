@@ -62,9 +62,9 @@ export default function ViewTransporterData() {
 
 
 export const viewTransporterDataAction = async ({request,params}) => {
-// (`${backendurl}/get_transporter`
+// (`${backendurl}get_transporter`
     const formData = await request.json();
-    const sendViewRequest = await fetch(`${backendurl}/viewtransporter`, {
+    const sendViewRequest = await fetch(`${backendurl}viewtransporter`, {
     method: request.method,
     // mode: 'no-cors',
     headers: {

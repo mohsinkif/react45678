@@ -210,9 +210,9 @@ export default function RegisterFarmer() {
 export const farmerRegistrationAction = async ({request, params}) => {
 
     const formData = await request.json();
-    const sendDataRequest = await fetch(`${backendurl}/RegisterUser`, {
+    const sendDataRequest = await fetch(`${backendurl}RegisterUser`, {
     method: request.method,
-    // (`${backendurl}/get_transporter`
+    // (`${backendurl}get_transporter`
     // mode: 'no-cors',
     headers: {
       "Content-Type": "application/json",

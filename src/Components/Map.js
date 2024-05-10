@@ -12,7 +12,7 @@ const bounds = [
   [51.5, -0.06],
 ]
 async function Fetchdata(){
-  const data = await axios.get(`${backendurl}/fetch_coordinates`)
+  const data = await axios.get(`${backendurl}fetch_coordinates`)
   return data
 }
 

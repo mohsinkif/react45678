@@ -25,7 +25,7 @@ export default function Table() {
           return;
         }
 
-        const response = await fetch(`${backendurl}/get_transporter`, {
+        const response = await fetch(`${backendurl}get_transporter`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

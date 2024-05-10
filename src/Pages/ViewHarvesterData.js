@@ -65,9 +65,9 @@ export default function ViewHarvesterData() {
 
 
 export const viewHarvesterDataAction = async ({request,params}) => {
-// (`${backendurl}/get_transporter`
+// (`${backendurl}get_transporter`
     const formData = await request.json();
-    const sendViewRequest = await fetch(`${backendurl}/viewharvester`, {
+    const sendViewRequest = await fetch(`${backendurl}viewharvester`, {
     method: request.method,
     // mode: 'no-cors',
     headers: {

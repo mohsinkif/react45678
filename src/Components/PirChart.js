@@ -11,7 +11,7 @@ const PieChart = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${backendurl}/predictioncount`);
+        const response = await axios.get(`${backendurl}predictioncount`);
         setPieChartData(response.data);
         setLoading(false);
       } catch (error) {

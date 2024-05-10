@@ -4,11 +4,11 @@ import AdminNavbar from '../Components/AdminNavbar';
 import { backendurl } from '../constant';
 const ContactEntries = () => {
   const [contactEntries, setContactEntries] = useState([]);
-// (`${backendurl}/get_transporter`
+// (`${backendurl}get_transporter`
   useEffect(() => {
     const fetchContactEntries = async () => {
       try {
-        const response = await axios.get(`${backendurl}/contact_entries`);
+        const response = await axios.get(`${backendurl}contact_entries`);
         setContactEntries(response.data.data);
       } catch (error) {
         console.error('Error fetching contact entries:', error);

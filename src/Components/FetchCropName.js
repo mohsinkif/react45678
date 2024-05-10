@@ -7,7 +7,7 @@ const FetchCropName = ({ token }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`${backendurl}/fetch_crop`, {
+        const response = await fetch(`${backendurl}fetch_crop`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

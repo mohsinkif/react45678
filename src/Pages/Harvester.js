@@ -26,7 +26,7 @@ export default function Table() {
           return;
         }
 
-        const response = await fetch(`${backendurl}/get_harvesters`, {
+        const response = await fetch(`${backendurl}get_harvesters`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

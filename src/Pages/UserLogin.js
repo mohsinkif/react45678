@@ -43,8 +43,8 @@ if (token) {
 export const loginAction = async ({ request, params }) => {
   
   const formData = await request.json();
-  // (`${backendurl}/get_transporter`
-  const loginRequest = await fetch(`${backendurl}/login`, {
+  // (`${backendurl}get_transporter`
+  const loginRequest = await fetch(`${backendurl}login`, {
     method: request.method,
     // mode: 'no-cors',
     headers: {

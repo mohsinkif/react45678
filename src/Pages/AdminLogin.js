@@ -15,9 +15,9 @@ export default function AdminLogin() {
 export const adminLoginAction = async ({ request, params }) => {
   
   const formData = await request.json();
-  const loginRequest = await fetch(`${backendurl}/adminlogin`, {
+  const loginRequest = await fetch(`${backendurl}adminlogin`, {
     method: request.method,
-    // (`${backendurl}/get_transporter`
+    // (`${backendurl}get_transporter`
     // mode: 'no-cors',
     headers: {
       "Content-Type": "application/json",

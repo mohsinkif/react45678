@@ -18,7 +18,7 @@ export default function DataTable({ data, pathName }) {
         harvester_email: event.target.value,
       }) ||
       (pathName === "viewfarmer" && { farmeremail: event.target.value });
-    fetch(`${backendurl}/${endpoint}`, {
+    fetch(`${backendurl}${endpoint}`, {
       method: "delete",
       headers: {
         "Content-Type": "application/json",

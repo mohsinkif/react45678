@@ -24,10 +24,10 @@ const Contact = () => {
       }
 
       const response = await axios.post(
-        `${backendurl}/submit_message`,
+        `${backendurl}submit_message`,
         { message: formData.message, token }
       );
-// (`${backendurl}/get_transporter`
+// (`${backendurl}get_transporter`
       if (!response.ok) {
         throw new Error(`Failed to submit message: ${response.statusText}`);
       }
