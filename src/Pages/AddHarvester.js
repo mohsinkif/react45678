@@ -135,7 +135,7 @@ export default function AddHarvester() {
           </div>
         </form>
       </div>
-      <Footer/>
+      {/* {/* <Footer/> */} */}
     </div>
   );
 }

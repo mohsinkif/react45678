@@ -87,7 +87,6 @@ export default function Table() {
         />
       </Box>
       <PieChart/>
-      <Footer style={{ position: "absolute", bottom: 0 }} />
     </>
   );
 }

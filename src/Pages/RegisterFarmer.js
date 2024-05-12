@@ -202,7 +202,7 @@ export default function RegisterFarmer() {
         </form>
       </div>
       <br/>
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   );
 }

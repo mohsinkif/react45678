@@ -12,7 +12,7 @@ export default function Home() {
       <Navbar/>
       <Map/>
       {/* <PieChart/> */}
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   )
 }

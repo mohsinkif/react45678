@@ -60,7 +60,7 @@ At AgriDrone, we believe in the power of data-driven decision-making to enhance 
       <Team />
       <br/><br/><br/>
       {/* <IndividualIntervalsExample/> */}
-      <Footer/>
+      {/* {/* <Footer/> */} */}
     </>
   );
 }

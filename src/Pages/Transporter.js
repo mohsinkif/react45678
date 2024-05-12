@@ -87,7 +87,6 @@ export default function Table() {
       </Box>
       <div className="title text-4xl font-bold text-center py-8" style={{}}>MORE ABOUT US</div>
       <IndividualIntervalsExample/>
-      <Footer style={{ position: "absolute", bottom: 0 }} />
     </>
   );
 }

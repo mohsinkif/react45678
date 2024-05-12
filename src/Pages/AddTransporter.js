@@ -137,7 +137,7 @@ export default function AddTransporter() {
           </div>
         </form>
       </div>
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   );
 }

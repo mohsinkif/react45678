@@ -115,7 +115,7 @@ Your input enables us to continually refine our technology and offerings, making
                 </div>
                 
             </div>
-      <Footer/>
+      {/* <Footer/> */}
         </>
         
     )
